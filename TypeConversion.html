@@ -1,0 +1,25 @@
+<html>
+    <script>
+        var a = 2;
+        var booleanWraper  = new Boolean(true);
+        var b = {
+            
+            valueOf:function()
+            {
+                console.log("Value of");
+                return "3";
+            },
+            /*toString:function()
+            {
+                console.log("To String");
+                return "WTF";
+            }*/
+
+        };
+        var result = a + b;
+        console.log("result ",result, " ",typeof result);
+
+        console.log("'2'===2", ('2'===2));
+        console.log("'2'==2", ('2'==2));
+    </script>
+</html>

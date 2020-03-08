@@ -1,0 +1,24 @@
+<html>
+    <script>
+        var a = 50;
+        function hello()
+        {
+            console.log("A is ",a);
+            //let a = 20;
+            console.log("After console A is ",a);
+            {
+                console.log("A is ",a);
+                //a = "Hello";
+                //let a = "Hello";
+                let a = "Hello";
+                console.log("A is ",a);
+                //a = "Something";
+                //var a = "How are you";//let don't allow duplicate
+            }
+           
+        }
+        hello();
+        console.log("After all A is ",a);
+
+    </script>
+</html>

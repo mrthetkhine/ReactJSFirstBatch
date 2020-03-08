@@ -1,0 +1,34 @@
+<html>
+    <script>
+        'use strict';
+        +function()
+        {
+            var s = "Hello";
+            console.log("S Length ",s.length);  
+            //s.len = 3;
+            console.log("S length ",s.len);
+            console.log("Type of s ",typeof s);
+            var str = new String("Hello World");
+            console.log("Type of s ",typeof str);
+
+            var num = new Number("124");
+            console.log("Num is ", num);
+            var num2 = +"124";
+            console.log("Num2 is ",num2);
+
+            var myStr = "Hello";
+            myStr = myStr.toUpperCase();
+            console.log(myStr);
+
+            var obj = {
+                name : 'Tk',
+                age : 34,
+            };
+            console.log("Obj ",obj);
+            obj.name  = 'Name Change';
+            console.log("Obj ",obj);
+        }();
+
+        
+    </script>
+</html>
