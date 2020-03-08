@@ -1,0 +1,22 @@
+<html>
+    <script>
+        var arr = [1, , , , , 5];
+        console.log(arr);
+
+        var obj = {
+            name : 'Tk',
+            age : 34,
+            address : {
+                city : 'Yangon',
+                township : 'Yankin',
+            }
+        }
+        console.log(obj);
+        console.log("Township ", obj.address.township);
+
+        var propertyName = "township"
+        obj["if"]= "Ok";
+        console.log("Acces speical ", obj["if"]);
+        console.log("Township ",obj["address"][propertyName]);
+    </script>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <script>
+       var obj = {};
+       var something = {
+           age : 34,
+       };
+       console.log( "obj && something ==>", (obj && something));
+
+       var falsethy = "";
+       console.log("falethy && something ==>", (falsethy && something));
+
+       console.log( "obj || something ==>", (obj || something));
+       console.log( "falsethy || something ==>", (falsethy || something));
+
+       var myVar ;
+
+       myVar = myVar || "Initial Value";
+       window.MyModule = {
+
+       };
+       window.MyModule = window.MyModule || {};
+       console.log("My Var is ",myVar);
+    </script>
+</html>
