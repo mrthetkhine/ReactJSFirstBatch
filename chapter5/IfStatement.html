@@ -1,0 +1,29 @@
+<html>
+    <script>
+       var something = {};
+
+       if( something )
+       {
+           console.log("True path");
+       }
+       else
+       {
+           console.log("else part");
+       }
+       var obj = {
+           "0": function ()
+           {
+            console.log("Zero block");
+           },
+           "1": function ()
+           {
+            console.log("One block");
+           },
+           "default":function(){
+               console.log("Else");
+           }
+       };
+       var num = 10;
+       obj[num] ? obj[num]() : obj["default"]();
+    </script>
+</html>

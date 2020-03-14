@@ -1,0 +1,20 @@
+<html>
+    <script>
+       var obj = {
+           name : 'Tk',
+           age : 34,
+       }    
+       var prop  = "age2";
+       console.log("Name in obj", "name" in obj );
+       console.log("age in obj ", prop in obj );
+
+       var arr = [10,, 20,30,];
+       console.log(arr);
+       console.log("1 in arr ", 1 in arr );
+
+       for(var prop in window)
+       {
+           console.log("key ",prop, " value ", window[prop]);
+       }
+    </script>
+</html>
