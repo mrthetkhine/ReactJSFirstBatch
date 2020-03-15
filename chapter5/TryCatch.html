@@ -1,0 +1,30 @@
+<html>
+    <script>
+      function getMe()
+      {
+        try
+        {
+           throw "Woo Error";
+           return 5;
+        
+        }
+        catch(e)
+        {
+            console.log('What up man ',e);
+            //throw "Ok";
+            return 10;
+        }
+        finally
+        {
+            console.log("Finally Ever run");
+            //throw "Ok !!";
+            return 30;
+            
+        }
+        
+      }
+      var c = getMe();
+      
+      console.log("End of code ",c);
+    </script>
+</html>

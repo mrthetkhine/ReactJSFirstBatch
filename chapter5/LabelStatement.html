@@ -1,0 +1,16 @@
+<html>
+    <script>
+      outerLoop:for(var i=0;i < 5; i++)
+      {
+          console.log("I is ",i);
+          for(var j=0; j < 4; j++)
+          {
+              if( j==2)
+              {
+                  break outerLoop;
+              }
+              console.log(" J is ",j);
+          }
+      }
+    </script>
+</html>

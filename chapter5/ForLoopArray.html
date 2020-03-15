@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div> 1</div>
+        <div> 2</div>
+        <div> 3</div>
+    </body>
+    <script>
+        var arr = [10,20,40];
+
+        for(var i=0, len = arr.length ; i < len ; i++)
+        {
+            console.log('Arr ',arr[i]);
+            arr.push(i);
+        }
+        for(var i=0; i< arr.length;i++)
+        {
+            console.log('Second loop ',arr[i]);
+            //arr.push(i);
+        }
+
+        var divs = document.getElementsByTagName("div");
+        for (var i=0,len = divs.length; i < len; i++){
+            console.log('Div s',divs[i]);
+            document.body.appendChild(document.createElement("div"));
+        }
+    </script>
+</html>

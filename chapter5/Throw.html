@@ -1,0 +1,31 @@
+<html>
+    <script>
+      function div(left,right)
+      {
+          console.log("Hello");
+          if( left == 0)
+          {
+              throw "Left operand is zero";
+          }
+          return left/right;
+      }
+      
+      try
+      {
+        //console.log(div(0,0));
+        console.log(div(10,20));
+      
+      }
+      catch(e)
+      {
+        console.log('What up man ',e);
+      }
+      finally
+      {
+          console.log("Finally Ever run");
+          
+      }
+      
+      console.log("End of code");
+    </script>
+</html>

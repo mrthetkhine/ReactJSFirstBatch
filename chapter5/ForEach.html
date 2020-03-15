@@ -1,0 +1,28 @@
+<html>
+   
+    <script>
+        var arr = [10,20,40];
+
+        var obj = {
+            name : 'TK',
+            age : 23,
+        }
+       
+        for(var prop in obj)
+        {
+            console.log('Pro ', prop, ' Value ',obj[prop]);
+        }
+
+        var arr2 = [1,2, , , ,10];
+        for(var i=0, len = arr2.length; i < len ; i++)
+        {
+            console.log("Arr ", arr2[i]);
+        }
+
+        for(var key in arr2)
+        {
+            console.log('Pro ', key, ' Value ',arr2[key]);
+            arr2.push(10);
+        }
+    </script>
+</html>
