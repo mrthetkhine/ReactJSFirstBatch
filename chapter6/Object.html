@@ -1,0 +1,39 @@
+<html>
+    <script>
+        let mgMg = {
+            name : "Mg Mg",
+            age : 11        
+        };
+        console.log("Object ",mgMg);
+        console.log("Name ",mgMg.name, " Age ", mgMg.age);
+
+        mgMg.shcool = "UCSY"; //Add
+        console.log("School ",mgMg.shcool);
+
+        //Delete
+        //delete mgMg.age;
+        console.log("mg Mg ",mgMg);
+
+        var uMaung = mgMg;
+        uMaung.name = "U Maung";
+
+        console.log("Mg Mg ",mgMg);
+        console.log("U Maung ",uMaung);
+
+        console.log("MgMg == uMaung ", mgMg == uMaung);
+        uMaung = {
+            name : "Kyaw Thu",
+            age : 45
+        };
+        mgMg.age = 20;
+        console.log("Mg Mg ",mgMg);
+        console.log("U Maung ",uMaung);
+        console.log("MgMg == uMaung ", mgMg == uMaung);
+
+        var a = 10;
+        var b = a;
+        b ++;
+        console.log("A ",a , " B ", b);
+
+    </script>
+</html>
