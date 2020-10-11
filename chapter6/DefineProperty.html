@@ -1,0 +1,25 @@
+<html>
+    <script>
+        //"use strict";
+        var obj = {
+
+        };
+        Object.defineProperty(obj,"x",{
+            value : 1,
+            writable: false, 
+            enumerable: true, 
+            configurable: false
+        });
+        console.log(obj.x);
+        obj.x = 100;
+        console.log("Object" ,obj);
+
+        for(var pro in obj)
+        {
+            console.log("Pro ",pro);
+        }
+       // delete obj.x;
+        console.log("Obj ",obj);
+        console.log("Obj ",Object.keys(obj));
+    </script>
+</html>

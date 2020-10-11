@@ -1,0 +1,23 @@
+<html>
+    <script>
+        "use strict";
+        var circle = {
+            r: 10,
+            get area()
+            {
+                return Math.PI * this.r* this.r;
+            },
+            set radius(newValue)
+            {
+                if(typeof newValue == 'number')
+                {
+                    this.r = newValue;
+                }
+            }
+        }
+        console.log("Circle area ",circle.area);
+        circle.radius = "Helo";
+        circle.radius = 23;
+        console.log("Circle ",circle);
+    </script>
+</html>

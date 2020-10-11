@@ -1,0 +1,34 @@
+<html>
+    <script>
+        "use strict";
+        var obj = {
+            name : 'TK',
+            age : 36,
+            school : {
+                name : "UCSY",
+                location:"Shwe Pyi Thar"
+            },
+        };
+        console.log("Obj is ",obj);
+
+        var myDate = new Date();
+        console.log('My Date ',myDate );
+
+        var obj2 = Object.create({
+            name : "Obj build with Object.create",
+            age : 100,
+        });
+        console.log("Obj2 ",obj2);
+        console.log("Obj2 ",obj2.name);
+        console.log("Obj2['name ']" ,obj2["name"]);
+
+        var fieldName = 'age';
+        console.log('Obj2 age ', obj2[fieldName]);
+
+        var setting = {
+            "dbName" : "dee",
+            "pwd":'1222'
+        }
+        console.log('Setting ',setting['dbName']);
+    </script>
+</html>

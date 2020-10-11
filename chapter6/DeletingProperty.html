@@ -1,0 +1,19 @@
+<html>
+    <script>
+        "use strict";
+        var parent ={
+            name : 'TK',
+            age : 36
+        }
+
+        delete parent.age;
+        console.log("Parent ",parent);
+
+        var child = Object.create(parent);
+        
+        console.log("name in child ", "name" in child);
+        console.log("name in parent ", "name" in parent);
+
+        console.log("hasOwnProperty name in child ", child.hasOwnProperty("name"));
+    </script>
+</html>

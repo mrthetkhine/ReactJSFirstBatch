@@ -1,0 +1,14 @@
+<html>
+    <script>
+        "use strict";
+        var parent = {
+            name : "Something"
+        };
+        var child = Object.create(parent);
+        child.age = 10;
+
+        console.log("Child prototype ",child.__proto__);
+        console.log("Is prototype of ", parent.isPrototypeOf(child));
+        
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <script>
+        "use strict";
+        var user = {
+            name: "How are you",
+            age : 32,
+            password:"49422",
+            hello : function()
+            {
+                console.log("Hello");
+            },
+            toString: function()
+            {
+                return "Nam->"+ this.name+" Age "+this.age;
+            },
+            toJSON:function(){
+                console.log("To JSON called ");
+                return {
+                    userName: this.name,
+                    age : this.age
+                }
+            },
+            valueOf: function()
+            {
+                console.log("Value of invoked");
+                return this.age;
+            }
+        };
+        console.log("JSON string ",JSON.stringify(user));
+
+        var str = JSON.stringify(user);
+        var user2 = JSON.parse(str);//Deserialization
+
+        console.log("user 2 ",user2);
+
+        console.log("user==user2 ",user == user2);
+        //user2.hello();
+        console.log("User "+user);
+
+        console.log(user+3);
+    
+    </script>
+</html>

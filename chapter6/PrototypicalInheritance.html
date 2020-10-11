@@ -1,0 +1,43 @@
+<html>
+    <script>
+        "use strict";
+        var parent ={
+            name : 'TK',
+            age : 36
+        }
+
+        var obj1 = Object.create(parent,{
+                school : {
+                    value: "UCSY",
+                    writable: true
+                    }
+                });
+        
+        var obj2 = Object.create(parent ,{
+                school : {
+                    value: "UDE",
+                    writable: true
+                }
+                });
+
+        parent.age = 300;
+        console.log("Obj 1 ",obj1);
+        console.log("Obj 2 ",obj2);
+
+        console.log("Age 1 ",obj1.age);
+        console.log("Age 2 ",obj2.age);
+
+        obj1.age = 100;
+        console.log("Age 1 ",obj1.age);
+        console.log("Obj1 ",obj1);
+        console.log("Age 2 ",obj2.age);
+        console.log("Parent.age ",parent.age);
+        console.log("Parent ",parent);
+
+        parent.age = 200;
+        console.log("Age 1 ",obj1.age);
+        console.log("Obj1 ",obj1);
+        console.log("Age 2 ",obj2.age);
+        console.log("Error ",obj2.hello);
+    </script>
+</html>
