@@ -1,0 +1,18 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [];
+        arr.push("One","Two");
+        console.log("Arr ",arr);
+        
+        delete arr[0];
+        console.log("Arr ",arr);
+
+        var newArray = [10,20,30,140,150]; //=>[10,30]
+        newArray.splice(1,2);//delte index 1 element, remove 2
+        console.log("New Array ",newArray);
+        
+        newArray.splice(8,0,40,50,60);
+        console.log("New Array ",newArray);
+    </script>
+</html>

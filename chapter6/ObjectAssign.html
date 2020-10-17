@@ -1,0 +1,29 @@
+<html>
+    <script>
+        var address = {
+            street : "Innya Street"
+        };
+        var obj1 = {
+            name : "Tk",
+            address : address
+        };
+        var obj2 = {
+            name : "SaSaYaKa",
+            age : 36,
+        }
+        var obj3 = Object.assign(obj1,obj2, {
+            school :"UCSY"
+        });
+        console.log("Obj1 ",obj1);
+        console.log("Obj2 ",obj2);
+        console.log("Obj3 ",obj3);
+
+        console.log(" Obj 1 == Obj 3", obj1==obj3);
+
+        var clone  = { ...obj3};
+        console.log("Clone ",clone);
+        address.street  = "Change";
+        console.log("Clone == obj3 ",clone == obj3);
+        console.log("Clone ",clone);
+    </script>
+</html>

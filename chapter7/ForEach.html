@@ -1,0 +1,23 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [10,20,30,,,40];
+        var sum = 0;
+        arr.forEach(function (x,index, a)
+        {
+            console.log("Invoke ",x,index, a);
+            sum+= x;
+        });
+
+        function square(x)
+        {
+            console.log("square x ",x*x);
+        }
+        arr.forEach(square);
+
+        
+        console.log("Sum ",sum); 
+
+        var newArray = [];
+    </script>
+</html>
