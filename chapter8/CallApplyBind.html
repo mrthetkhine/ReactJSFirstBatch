@@ -1,0 +1,22 @@
+
+<html>
+    <script>
+        "use strict";
+    
+        var obj = {
+            name : "Tk",
+            say : function(something)
+            {
+                console.log("Hi I am ",this.name, something);
+            }
+        }
+        obj.say();
+        var obj2 = { 
+            name : "Student",
+        }
+        obj.say.call(obj2, " Are you ok");
+        obj.say.apply(obj2,["Hello"])
+        var newFunc = obj.say.bind(obj2);
+        newFunc("How are you");
+    </script>
+</html>

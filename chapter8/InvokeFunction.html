@@ -1,0 +1,36 @@
+
+<html>
+    <script>
+        "use strict";
+    
+        function hello()//Function Declaration
+        {
+            console.log("Hello");
+        }
+       hello();//Normal
+       window.hello(); //method 
+       new hello();//as constructor
+       /*
+       window['hello']();//method
+
+        new hello();//as constructor
+        new hello;//yes
+        new window.hello;
+        new window['hello'];
+        this.hello();
+        this['hello']();
+
+        new this.hello();
+        new this['hello']();
+        new this.hello;
+        new this['hello'];
+        */
+        var obj = {
+            hello: function()
+            {
+                console.log("hello method");
+            }
+        }
+        obj.hello();
+    </script>
+</html>

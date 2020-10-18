@@ -1,0 +1,62 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [10,20,30,40,1,3,9,100];
+        var greaterThanTwenty = arr.filter( function (ele){
+            return ele >20;
+        });
+        console.log("Array ",arr);
+        console.log("Double ",greaterThanTwenty);
+
+        var newArr = [];
+        for(var i=0;i< arr.length;i++)
+        {
+            if( arr[i]>20)
+            {
+                newArr.push(arr[i]);
+            }
+        }
+        
+        console.log("new Arr with imperative progr ",newArr);
+        var even = function (e)
+        {
+            return e %2 == 0;
+        }
+        var evenArray = arr.filter(even);
+        console.log("Even array ",evenArray);
+
+        var odd = (e)=> !even(e);
+        var oddArray = arr.filter(odd);
+        console.log("Odd array ",oddArray);
+        /*
+        var reduxStore = [{
+                id : 1,
+                name : "One"
+            },
+            {
+                id : 2,
+                name : "Two"
+            },
+            {
+                id : 3,
+                name : "Three"
+            }
+        ];
+        var newStore =  reduxStore.map (function (ele){
+            if( ele.id == 2)
+            {
+                return {
+                    id : ele.id,
+                    name  :"Hello"
+                }
+            }
+            else
+            {
+                return ele;
+            }
+        });
+        console.log("Org Store ", reduxStore);
+        console.log("New Store ", newStore);
+        */
+    </script>
+</html>

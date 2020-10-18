@@ -1,0 +1,26 @@
+<html>
+    <script>
+        "use strict";
+        
+        
+        var reduxStore = [{
+                id : 1,
+                name : "One"
+            },
+            {
+                id : 2,
+                name : "Two"
+            },
+            {
+                id : 3,
+                name : "Three"
+            }
+        ];
+        var newStore =  reduxStore.filter (function (ele){
+            return ele.id != 2; 
+        });
+        console.log("Org Store ", reduxStore);
+        console.log("New Store ", newStore);
+        
+    </script>
+</html>

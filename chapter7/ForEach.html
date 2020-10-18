@@ -1,7 +1,7 @@
 <html>
     <script>
         "use strict";
-        var arr = [10,20,30,,,40];
+        var arr = [10,20,30,100,200,40];
         var sum = 0;
         arr.forEach(function (x,index, a)
         {
@@ -19,5 +19,11 @@
         console.log("Sum ",sum); 
 
         var newArray = [];
+
+        arr.forEach(function (x,index, a)
+        {
+            a[index] = x*x;
+        });
+        console.log("Square ",arr);
     </script>
 </html>

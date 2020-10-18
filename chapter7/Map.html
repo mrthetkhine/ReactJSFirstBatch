@@ -1,0 +1,41 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [10,20,30,40];
+        var doubleArray = arr.map( function (ele){
+            console.log("Ele ",ele);
+            return ele*2;
+        });
+        console.log("Array ",arr);
+        console.log("Double ",doubleArray);
+
+        var reduxStore = [{
+                id : 1,
+                name : "One"
+            },
+            {
+                id : 2,
+                name : "Two"
+            },
+            {
+                id : 3,
+                name : "Three"
+            }
+        ];
+        var newStore =  reduxStore.map (function (ele){
+            if( ele.id == 2)
+            {
+                return {
+                    id : ele.id,
+                    name  :"Hello"
+                }
+            }
+            else
+            {
+                return ele;
+            }
+        });
+        console.log("Org Store ", reduxStore);
+        console.log("New Store ", newStore);
+    </script>
+</html>

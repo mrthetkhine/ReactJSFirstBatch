@@ -1,0 +1,19 @@
+
+<html>
+    <script>
+        "use strict";
+        var a = {"0":"a", "1":"b", "2":"c", length:3};
+
+        console.log("A ",a);
+
+        Array.prototype.forEach.call(a,function (data) //Mixin
+        {
+            console.log("Data ",data);
+        });
+
+        var arr = [10,20,30,40,50,-1];
+
+        var max = Math.max.apply(Math,arr);
+        console.log("Max ",max);
+    </script>
+</html>

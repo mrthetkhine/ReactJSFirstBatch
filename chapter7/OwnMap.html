@@ -1,0 +1,22 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [-10,20,30,40,1,3,9,100];
+
+        Array.prototype.ourMap = function(func)
+        {
+            var newArr = [];
+            console.log("Woo our function");
+            for(var i=0;i< this.length;i++)
+            {
+                newArr.push( func(this[i]));
+            }
+            return newArr;
+        }
+
+        var square = (e)=>e*2;
+        var newArr = arr.ourMap(square);
+
+        console.log("New Arr ",newArr);
+    </script>
+</html>

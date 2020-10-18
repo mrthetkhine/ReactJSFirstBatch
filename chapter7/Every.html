@@ -1,0 +1,22 @@
+<html>
+    <script>
+        "use strict";
+        var arr = [-10,20,30,40,1,3,9,100];
+
+        var negative = function (ele){
+            return ele >= 0;
+        };
+        var allNonNegative = arr.every( negative );
+       
+       console.log("allNonNegative ",allNonNegative);
+
+       var even = (e)=> e %2 == 0 ;
+       var isAllEven =arr.every(even) ;
+       console.log("All Eeven ",isAllEven);
+
+       var isSomeNegative = arr.some(negative); 
+       console.log("Is Some negative ",isSomeNegative);
+
+        
+    </script>
+</html>

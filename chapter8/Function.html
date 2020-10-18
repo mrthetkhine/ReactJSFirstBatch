@@ -1,0 +1,29 @@
+
+<html>
+    <script>
+        "use strict";
+        //First class value
+        //1 Can assign to variable
+        //2 Can pass as parameter
+        //3 Can return from function.
+
+        function fun()
+        {
+            console.log("Hi, Fone Shu Lite");
+        }
+        fun();
+
+        var phoneShuLite = fun;
+        phoneShuLite(); //1
+
+        function getAnotherFunc()
+        {
+            function fun()
+            {
+                console.log("Antoher Fone Shu Lite");
+            }
+            return fun;
+        }
+        getAnotherFunc()();
+    </script>
+</html>
