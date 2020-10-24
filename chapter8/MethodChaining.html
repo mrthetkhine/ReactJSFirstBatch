@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function JQuery()
+        {
+            this.move = function()
+            {
+                console.log("Move function");
+                return this;
+            };
+            this.hi = function()
+            {
+                console.log("hi function");
+                return this;
+            }
+        }
+        var obj = new JQuery();
+        obj
+        .move()
+        .hi()
+        .hi()
+        .hi();
+    </script>
+</html>

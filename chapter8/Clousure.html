@@ -1,0 +1,31 @@
+<html>
+    <script>
+        "use strict";
+        
+        //Closure, Close Over
+        function hello()
+        {
+            var counter = 0;
+            return function hi()
+            {
+                return counter;
+            }
+        }
+        console.log(hello()());
+    </script>
+</html>
+/*
+main()
+{
+    counter;
+    super()
+    {
+        counter;
+        hi()
+        {
+            counter // refer to main.counter
+        }
+    }
+    super.hi();
+}
+*/

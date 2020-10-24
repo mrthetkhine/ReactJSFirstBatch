@@ -1,0 +1,47 @@
+<html>
+    <script>
+        "use strict";
+        var allSeat = [1,2,3];
+        function rotate(seat)
+        {
+            console.log("Rotate seat");
+        }
+        function move(seat)
+        {
+            console.log("Move seat");
+        }
+        function applyToAllSeat(operation)
+        {
+            for(var i=0;i< allSeat.length;i++)
+            {
+                operation(allSeat[i]);
+            }
+        }
+        function moveAllSeat()
+        {
+            for(var i=0;i< allSeat.length;i++)
+            {
+                if(allSeat[i])
+                {
+                    move(allSeat[i]);
+                }
+                
+            }
+        }
+        function rotateAllSeat()
+        {
+            for(var i=0;i< allSeat.length;i++)
+            {
+                if(allSeat[i])
+                {
+                    rotate(allSeat[i]);
+                }
+                
+            }
+        }
+        
+        applyToAllSeat(rotate);
+        applyToAllSeat(move); 
+        //console.log(operate(add,1,2));
+    </script>
+</html>

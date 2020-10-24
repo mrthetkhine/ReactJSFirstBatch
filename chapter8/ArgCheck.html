@@ -1,0 +1,17 @@
+<html>
+    <script>
+        "use strict";
+        
+        function acceptTwoParam(a,b)
+        {
+            if( arguments.length !=2)
+            {
+                alert("Need two argument");
+            }
+            console.log("Hello overwrite ",a , " Argument.length ", arguments.length);
+            console.log();
+        }
+        acceptTwoParam();
+        acceptTwoParam(10,20);
+    </script>
+</html>

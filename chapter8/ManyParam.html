@@ -1,0 +1,28 @@
+<html>
+    <script>
+        "use strict";
+        
+        function method(color,size, width)
+        {
+            console.log("Method");
+        }
+        method("red",10,200);
+
+        /*
+        obj{
+            color:'',
+            size:number,
+            width:number,
+        }
+        */
+        function method2(obj)
+        {
+            console.log("Method Color ",obj.color, " Size ", obj.size, " Width");
+        }
+        method2({
+            color : 'red',
+            size : 22,
+            width:12,
+        });
+    </script>
+</html>

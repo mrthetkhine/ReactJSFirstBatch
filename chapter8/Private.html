@@ -1,0 +1,30 @@
+<html>
+    <script>
+        "use strict";
+        
+        //Closure, Close Over
+        function Stack()
+        {
+            var element = [];
+
+            function push(item)
+            {
+                element.push(item);
+            }
+            function pop()
+            {
+                return element.pop();
+            }
+            return {
+                myPush:push,
+                myPop: pop
+            }
+           
+        }
+        var st1 = Stack();
+        st1.myPush(10);
+        st1.myPush(20);
+        console.log("Pop ",st1.myPop());
+        console.log("Pop ",st1.myPop());
+    </script>
+</html>

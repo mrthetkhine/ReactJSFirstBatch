@@ -1,0 +1,33 @@
+<html>
+    <script>
+        "use strict";
+        
+        factorial.cache = {1:1};
+        function factorial(num)
+        {
+            if(factorial.cache[num])
+            {
+                console.log("Get from cache "+num);
+                return factorial.cache[num];
+            }
+            else
+            {
+                console.log("Get from computation");
+                if(num==1)
+                {
+                    factorial.cache[1] =1;
+                    return 1;
+                }
+                else
+                {
+                    var result = num * factorial(num-1);
+                    factorial.cache[num] = result;
+                    return result;
+                }
+            }
+        }
+        factorial(5);
+        factorial(3);
+        
+    </script>
+</html>

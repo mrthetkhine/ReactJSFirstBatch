@@ -1,0 +1,37 @@
+<html>
+    <script>
+        "use strict";
+        
+        function hello(arg)
+        {
+            console.log("Hello overwrite ",arg , " Argument.length ", arguments.length);
+            console.log();
+        }
+        hello();
+        hello(1,2,3,5);
+
+        function age(value)
+        {
+            if(arguments.length == 1)
+            {
+                console.log("Setter");
+            }
+            else
+            {
+                console.log("Getter ");
+            }
+        }
+        age();
+        age(30);
+        function sumAll()
+        {
+            var total = 0;
+            for(var i=0;i< arguments.length;i++)
+            {
+                total += arguments[i];
+            }
+            return total;
+        }
+        console.log("Sum All (1,2,3)", sumAll(1,2,3,4));
+    </script>
+</html>
