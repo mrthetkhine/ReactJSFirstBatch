@@ -1,0 +1,28 @@
+<html>
+    <script>
+        //First Order Function
+        
+       var arr = [10,20,40,50];
+       console.log(arr.filter(ele=>ele>20));
+       
+       //Higher Order Function
+       //Accept Function ,or return Function
+
+       function firstOrder(anotherFunc)
+       {
+           console.log("First order executed");
+           return anotherFunc;
+       }
+       function secondOrder(fOrderFunc)
+       {
+           console.log("Second order execute");
+           return fOrderFunc;
+       }
+
+       function hello()
+       {
+           console.log("Hello executed");
+       }
+       secondOrder(firstOrder(hello));
+    </script>
+</html>

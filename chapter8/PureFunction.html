@@ -1,0 +1,27 @@
+<html>
+    <script>
+    
+        function incCount(count)//Pure function
+        {
+            return count +1;//count++ <=side effect
+        }
+        incCount();
+        console.log("incCount " ,incCount(10));
+        console.log("incCount " ,incCount(10));
+
+        function pureOrNot(count)
+        {
+            return count+Math.random();
+        }
+        function howAbouThis(a)
+        {
+            return a+ pureOrNot(a);
+        }
+        function add(x,y)
+        {
+            return x+y;
+        }
+        console.log(add(2,3));
+        console.log(add(2,3));
+    </script>
+</html>

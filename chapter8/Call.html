@@ -1,0 +1,22 @@
+<html>
+    <script>
+        "use strict";
+        name = "Barbu Gyi";
+        var obj = {
+            name : "Tk",
+            greet: function(message)
+            {
+                console.log("Fone shu lite by ",this.name , " message ",message);
+            }
+        }
+        var obj2 = {
+            name : "Someone"
+        };
+        obj.greet.call(obj2,"My message");
+        obj.greet("ObjGreet");
+
+        var method = obj.greet;
+        ///method();
+        method.call(obj,"Hello");
+    </script>
+</html>

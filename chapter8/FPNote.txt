@@ -1,0 +1,4 @@
+Function
+Imperative = computation, side effect
+Functional Programming = tranfromation, no side effect
+Side Effect

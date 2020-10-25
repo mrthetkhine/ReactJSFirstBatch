@@ -1,0 +1,32 @@
+<html>
+    <script>
+       function compose(f,g)
+       {
+            return function()
+            {
+                var result = g.apply(this,arguments);
+                console.log("Result ",result);
+                return f.call(this,result);
+            }
+       }
+       function add(x,y)
+       {
+           console.log("Add ",x, " y",y);
+           return x+y;
+       }
+       function square(x)
+       {
+           console.log("Square ",x);
+           return x*x;
+       }
+       var newFun = compose(square,add);
+       console.log(newFun(10,2));
+    </script>
+</html>
+<!--
+//fun1, func2 => function()
+{
+    
+    return fun2(fun1(););
+}
+ -->
