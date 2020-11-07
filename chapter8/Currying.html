@@ -1,0 +1,28 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+       function add(a, b) {
+            return a +b;
+       }
+       var result= add(10,20);
+       console.log("Result ",result);
+       //Currying => Tranformtion function of more than 1 paramenter to functin accepting one parameter each time
+
+       function curryAdd(a)
+       {
+            return function(b)
+            {
+                return a+b;
+            }
+       }
+       result = curryAdd(1)(2);
+       console.log("Result ",result);
+
+       var addFive = curryAdd(5);
+
+       var arr = [10,20,40];
+       var results = arr.map(addFive);
+       console.log("Results ",results);
+    </script>
+</html>
