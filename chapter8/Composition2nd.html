@@ -1,0 +1,48 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+       var arr = [
+           { 
+               name: 'aung aung',
+               gender: 'male',
+               age : 23
+           },
+           { 
+               name: 'Mya Mya',
+               gender: 'female',
+               age : 40
+           },
+           { 
+               name: 'hla aung',
+               gender: 'male',
+               age : 45
+           },
+           { 
+               name: 'hla maung',
+               gender: 'male',
+               age : 50
+           },
+       ]
+       //အသက်ကြီးတဲ့ဘဲကြီးတွေကို နာမည်ရှေ. ဦးတပ်ပေးရမယ် , > 35 
+       var result = [];
+       for(var i=0;i< arr.length;i++)
+       {
+            //Male > 35
+            var obj = arr[i];
+            ///console.log("obj ",obj);
+            if(obj.age > 35)
+            {
+                if(obj.gender == 'male')
+                {
+                    //console.log("Obj ",obj);
+                    result.push({
+                        name : "U "+ obj.name
+                    });
+                }
+            }     
+       }
+       console.log("Result ",result);
+
+    </script>
+</html>

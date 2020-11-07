@@ -1,0 +1,9 @@
+Imperative/OOP         FP
+Mutable            Immutable
+Record, Object     List, Array, Flat Data Structure
+For,While,Do       Recursive Call,Tail Recursive Call
+If,Switch          Filter, Conditional
+Abstraction ->Class              Function,
+Exception Handling  Railway programming
+----------,        Pattern Matching
+                   Category, Functor, Applicative Functor, Monad, Monoid 

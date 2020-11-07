@@ -1,0 +1,16 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+        function dateTimeLog(msg)
+        {
+            return ( new Date() + msg);
+        }
+        function xmlLog(msg)
+        {
+            return ("<xml>"+msg+"</xml>");
+        }
+        console.log(dateTimeLog("hello"));
+        console.log(dateTimeLog(xmlLog("hello")));
+    </script>
+</html>

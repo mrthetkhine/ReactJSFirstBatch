@@ -1,0 +1,69 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+       var arr = [
+           { 
+               name: 'aung aung',
+               gender: 'male',
+               age : 23
+           },
+           { 
+               name: 'Mya Mya',
+               gender: 'female',
+               age : 40
+           },
+           { 
+               name: 'hla aung',
+               gender: 'male',
+               age : 45
+           },
+           { 
+               name: 'hla maung',
+               gender: 'male',
+               age : 50
+           },
+       ]
+       //အသက်ကြီးတဲ့ဘဲကြီးတွေကို နာမည်ရှေ. ဦးတပ်ပေးရမယ် , > 35 
+       function isSenior(obj)
+       {
+            return obj.age > 35;
+       }
+       function isMale(obj)
+       {
+            return obj.gender =='male';
+       }
+       function isBaeGyi(obj)
+       {
+            return isSenior(obj) && isMale(obj)
+       }
+       function isSawGyi(obj)
+       {
+        return isSenior(obj) && !isMale(obj)
+       }
+       function toMr(obj)
+       {
+           return "U "+obj.name;
+       }
+       function toDaw(obj)
+       {
+           return "Daw "+obj.name;
+       }
+       var result = arr.filter( isSawGyi )
+                        .map( function (obj)
+                        {
+                            return toDaw(obj);
+                        });
+        console.log("Result ",result);       
+    
+        var changeBaeGyiToMr = R.compose(
+                            R.map(toMr),
+                            R.filter(isBaeGyi)
+                        );
+        var changeSawGyiToDaw = R.compose(
+            R.map(toDaw),
+            R.filter(isSawGyi)
+        );                
+        console.log(changeBaeGyiToMr(arr));
+    </script>
+</html>
