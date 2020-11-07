@@ -65,5 +65,11 @@
             R.filter(isSawGyi)
         );                
         console.log(changeBaeGyiToMr(arr));
+
+        changeSawGyiToDaw = R.pipe( 
+            R.filter(isBaeGyi),
+            R.map(toMr),
+        ); 
+        console.log(changeSawGyiToDaw(arr));
     </script>
 </html>

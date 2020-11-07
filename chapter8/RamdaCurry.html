@@ -1,0 +1,14 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+       function add(a, b) {
+            return a +b;
+       }
+       var result= add(10,20);
+       
+       var curriedAdd = R.curry(add);
+       result = curriedAdd(1)(2);
+       console.log("Result ",result);
+    </script>
+</html>

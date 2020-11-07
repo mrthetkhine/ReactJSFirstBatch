@@ -1,0 +1,35 @@
+<html>
+    <script src="ramda.js">
+    </script>
+    <script>
+       var arr = [10,20,30,10,20,50];
+       console.log("Head ", R.head(arr));
+       console.log("Tail ", R.tail(arr));
+       console.log(R.init(arr));
+       console.log(R.last(arr));
+       console.log("Length ",R.length(arr));
+       console.log("Unique ",R.uniq(arr));
+
+       console.log("Prop ",R.prop('age',{
+           name :"Some",
+           age: 36
+       }));
+
+       const users = [
+        { name: 'John', age: 25 },
+        { name: 'Lenny', age: 51 },
+        { name: 'Andrew', age: 43 },
+        { name: 'Peter', age: 81 },
+        { name: 'Anna', age: 43 },
+        { name: 'Albert', age: 76 },
+        { name: 'Adam', age: 47 },
+        { name: 'Robert', age: 72 }
+        ];
+        console.log('Ages ',R.pluck('age', users));
+        console.log('Names ',R.pluck('name', users));
+
+        console.log('Max Age ',Math.max(...R.pluck('age', users)));
+
+        console.log('Split Every',R.splitEvery(2, users));
+    </script>
+</html>
