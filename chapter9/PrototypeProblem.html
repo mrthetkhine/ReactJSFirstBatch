@@ -12,16 +12,21 @@
                 console.log("Display Name ", this.name, " Age ",this.age);
                 console.log("have child ",this.child);
             }
+            this.addChild= function (childName){
+                this.child.push(childName);
+            };
         }
         Human.prototype = {
             child:[],
-            addChild: function (childName){
-                this.child.push(childName);
-            },
+            
         }
         var obj = new Human("Tk", 36);
         var obj2 = new Human("Aung Min ",12);
 
+        console.log("Obj ",obj);
+        console.log("Obj2 ",obj2);
+
+        obj.child = [];
         obj.addChild("C1");
 
         obj2.addChild("C2");
