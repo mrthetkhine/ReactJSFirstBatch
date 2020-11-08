@@ -1,0 +1,47 @@
+<html>
+    <script>
+        "use strict";
+        function Human(name,age)
+        {
+            this.name = name;
+            this.age = age;
+
+            this.display = function()
+            {
+                console.log("Name ",this.name, " Age ",this.age);
+            }
+        }   
+        function Teacher(name,age,school)
+        {
+            this.name = name;
+            this.age = age;
+            this.school = school;
+        }
+        
+        Teacher.prototype = new Human();
+       
+        
+        var obj = new Human("Tk", 36);
+        var obj2 = new Human("Aung Min ",12);
+
+        //obj.display();
+        //obj2.display();
+        console.log("obj instanceof Human", obj instanceof Human);
+        
+        var t1 = new Teacher("Aung ",12,"CU");
+        t1.display();
+        console.log("t1 instanceof Human", t1 instanceof Human);
+        console.log("t1 instanceof Teacher", t1 instanceof Teacher);
+
+        
+        Teacher.prototype = {
+            display : function()
+            {
+                console.log("Name ",this.name, " Age ",this.age);
+            }
+        }
+        t1.display();
+        console.log("t1 instanceof Human", t1 instanceof Human);
+        console.log("t1 instanceof Teacher", t1 instanceof Teacher);
+    </script>
+</html>
