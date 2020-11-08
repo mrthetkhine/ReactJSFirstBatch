@@ -1,0 +1,35 @@
+<html>
+    <script>
+        "use strict";
+        function Human(name,age)
+        {
+            this.name = name;
+            this.age = age;
+
+            this.display = function()
+            {
+                
+                console.log("Display Name ", this.name, " Age ",this.age);
+                console.log("have child ",this.child);
+            }
+        }
+        Human.prototype = {
+            child:[],
+            addChild: function (childName){
+                this.child.push(childName);
+            },
+        }
+        var obj = new Human("Tk", 36);
+        var obj2 = new Human("Aung Min ",12);
+
+        obj.addChild("C1");
+
+        obj2.addChild("C2");
+
+        obj.display();
+        obj2.display();
+        
+
+        
+    </script>
+</html>

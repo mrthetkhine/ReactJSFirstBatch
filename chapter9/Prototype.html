@@ -1,0 +1,39 @@
+<html>
+    <script>
+        "use strict";
+        function Human(name,age)
+        {
+            this.name = name;
+            this.age = age;
+
+            this.display = function()
+            {
+                console.log("Display in child");
+                console.log("Display Name ", this.name, " Age ",this.age);
+            }
+        }
+        /*
+        Human.prototype = {
+            display : function()
+            {
+                console.log("Display in prototype");
+                console.log("Display Name ", this.name, " Age ",this.age);
+            }
+        }
+        */
+        /*
+        Human.prototype.display = function()
+        {
+            console.log("Display Name ", this.name, " Age ",this.age);
+            //console.log("Display Name ", name, " Age ",age);
+        }*/
+        var obj = new Human("Tk", 36);
+        var obj2 = new Human("Aung Min ",12);
+
+        obj.display();
+        obj2.display();
+        console.log("obj.prototype.constructor === Human ", Human.prototype.constructor === Human);
+
+        
+    </script>
+</html>
