@@ -22,14 +22,19 @@
         }
         var obj = new Human("Tk", 36);
         var obj2 = new Human("Aung Min ",12);
-
+        var obj3 = new Human("Aung Maung ",12);
         console.log("Obj ",obj);
         console.log("Obj2 ",obj2);
 
-        obj.child = [];
+        obj.display();
+        
+        //obj.child = [];
+        obj.child.push("C22");
+        console.log("Obj ",obj);
         obj.addChild("C1");
 
         obj2.addChild("C2");
+        obj3.addChild("C3");
 
         obj.display();
         obj2.display();
