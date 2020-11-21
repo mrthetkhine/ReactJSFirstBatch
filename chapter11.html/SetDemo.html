@@ -1,0 +1,22 @@
+<html>
+  
+    <script>
+        var s = new Set([1,3,1,5,]);
+        console.log("Set ",s);
+
+        var s2 = new Set('hello');
+        console.log('Set s2 ',s2);
+
+        s.add('Element ');
+        console.log('Set s ',s);
+        console.log('S size ',s.size);
+
+        console.log('s.has(2) ',s.has(2));
+        console.log('s.has(1) ',s.has(1));
+
+        for(var p of s)
+        {
+            console.log("Property ",p );
+        }
+    </script>
+</html>

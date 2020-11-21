@@ -1,0 +1,17 @@
+<html>
+  
+    <script>
+       let m = new Map([
+           ["one",1],
+           ["two",2]
+    ]);
+        console.log("Map size ",m.size);   
+        m.set("three",3);
+
+        console.log("Get one ",m.get("one"));
+        
+        m.set("1","One");
+        console.log("Map size ",m.size);   
+        console.log("Get one ",m.get(1)); //Error
+    </script>
+</html>
