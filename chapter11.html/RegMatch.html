@@ -1,0 +1,13 @@
+<html>
+  
+    <script>
+      let pattern = /java/g;
+      let text = "javascript > java";
+      let match ;
+      while(( match= pattern.exec(text))!=null)
+      {
+          console.log(`Matched ${match[0]} at index ${match.index}`);
+          console.log(`Next search begin at ${pattern.lastIndex}`);
+      }  
+    </script>
+</html>
