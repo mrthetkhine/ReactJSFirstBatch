@@ -1,0 +1,25 @@
+<html>
+  
+    <script>
+      let pattern = /[abc]s$/i; 
+      console.log("hellos ", pattern.test("helloaS"));
+      console.log("ok ",pattern.test("ok"));
+
+      let telephone = /\d{9,}/i; 
+
+      console.log("telephone  123456789 ", telephone.test("123456789"));
+      console.log("telephone  12345678 ", telephone.test("12345679333"));
+
+      let alternative = /ab|cd|ef/;
+      console.log("ab ", alternative.test("ab"));
+      console.log("ed ", alternative.test("ed"));
+
+      let javaOrJavaScript = /java(script)?/;
+      console.log("java ", javaOrJavaScript.test("java"));
+      console.log("javascript ", javaOrJavaScript.test("javascript"));
+
+      console.log("JavaScript".search(/script/ui));
+
+      console.log("7 plus 8199 equals 15".match(/\d+/g));
+    </script>
+</html>
