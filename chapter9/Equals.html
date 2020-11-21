@@ -1,0 +1,31 @@
+<html>
+    <script>
+        "use strict";
+        function Human(name,age)
+        {
+            this.name = name;
+            this.age = age;
+
+            this.display = function()
+            {
+                console.log("Display in child");
+                console.log("Display Name ", this.name, " Age ",this.age);
+            }
+            this.equals = function(that)
+            {
+                console.log("Equal invoked");
+                return this.name == that.name && this.age == that.age;
+            }
+        }
+        var h1 = new Human("N1",10);
+        var h2 = new Human("N1",10);
+
+        var obj = {
+            name: "Tk",
+            age : 36
+        }
+        console.log("H1 == H2 ", h1.equals(h2));
+        var method = h1.display.bind(obj);
+        method();
+    </script>
+</html>        

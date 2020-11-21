@@ -1,0 +1,24 @@
+<html>
+    <script>
+        "use strict";
+        class Human
+        {
+            constructor(name,age)
+            {
+                this.name = name;
+                this.age = age;
+                console.log("Constructor invoked");
+            }
+            display()
+            {
+                console.log("Name ",this.name);
+                console.log("Age ",this.age);
+            }
+        }
+        var h1 = new Human("H1",36);
+        var h2 = new Human("H2",30);
+
+        h1.display();
+        h2.display();
+    </script>
+</html>

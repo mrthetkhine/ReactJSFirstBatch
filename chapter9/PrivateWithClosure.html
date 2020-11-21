@@ -1,0 +1,29 @@
+<html>
+    <script>
+        "use strict";
+        function Human(name,age)
+        {
+            var obj = {
+                name : name,
+                age : age,
+            }
+           
+            function setName(name)
+            {
+                obj.name = name;
+            }
+            function getName(name)
+            {
+                return obj.name;
+            }
+            return {
+                setName: setName,
+                getName: getName,
+            }
+        }
+        var h1 = Human("Tk",36);
+        console.log("H1 ",h1.getName());
+        h1.name = "Change";
+        console.log("H1 ",h1.getName());
+    </script>
+</html>        

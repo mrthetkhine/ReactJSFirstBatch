@@ -1,0 +1,26 @@
+<html>
+    <script>
+        "use strict";
+        function Bird()
+        {
+            this.fly = function()
+            {
+                console.log("Bird is flying");
+            }
+        }
+
+        function Aeroplane()
+        {
+            this.fly = function()
+            {
+                console.log("Aeroplane is flying");
+            }
+        }
+        var obj = new Bird();
+        obj.fly();
+
+        obj = new Aeroplane();
+        obj.fly();
+        
+    </script>
+</html>
