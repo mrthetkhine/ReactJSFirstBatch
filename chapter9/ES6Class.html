@@ -20,5 +20,21 @@
 
         h1.display();
         h2.display();
+
+        class Teacher extends Human
+        {
+            constructor(name,age,school)
+            {
+                super(name,age);
+                this.school = school;
+            }
+            static staticMethod()
+            {
+                console.log("Static method");
+            }
+        }
+        var t1 = new Teacher("T1",20,"UCSY");
+        t1.display();
+        Teacher.staticMethod();
     </script>
 </html>
