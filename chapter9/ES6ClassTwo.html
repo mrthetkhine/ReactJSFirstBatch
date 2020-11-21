@@ -1,0 +1,24 @@
+<html>
+    <script>
+        "use strict";
+        class Human
+        {
+            _name="Something";
+
+            get name()
+            {
+                return this._name;
+            }
+            set name(value)
+            {
+                console.log("Value ",value);
+                this._name = value;
+            }
+            
+        }
+        var h1 = new Human();
+        console.log("H1 ", h1.name);
+        h1.name = "New Value";
+
+    </script>
+</html>
