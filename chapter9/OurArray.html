@@ -1,0 +1,25 @@
+<html>
+    <script>
+        "use strict";
+        class OurArray extends Array
+        {
+            get first()
+            {
+                return this[0];
+            }
+            get last()
+            {
+                return this[this.length-1];
+            }
+            
+        }
+        let a = new OurArray();
+        console.log("a instanceof Array", a instanceof Array);
+        console.log("a instanceof OurArray", a instanceof OurArray);
+
+        a.push(10,2020,30);
+        console.log("A is ",a);
+        console.log("Frist ",a.first);
+        console.log("Last ",a.last);
+    </script>
+</html>
