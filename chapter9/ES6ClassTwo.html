@@ -16,9 +16,15 @@
             }
             
         }
+        Human.prototype.display = function()
+        {
+            console.log("Name ",this.name);
+            //console.log("Age ",this.age);
+        }
         var h1 = new Human();
         console.log("H1 ", h1.name);
         h1.name = "New Value";
 
+        h1.display();
     </script>
 </html>
