@@ -1,0 +1,19 @@
+<html>
+    
+    <script>
+        function* oneDigitPrimes()
+        {
+            yield 1;
+            yield 3;
+            yield 5;
+            yield 7;
+        }
+        let primes = oneDigitPrimes();
+
+        console.log("Primes ",primes.next().value);
+        console.log("Primes ",primes.next().value);
+        console.log("Primes ",primes.next().value);
+        console.log("Primes ",primes.next().value);
+        
+    </script>
+</html>

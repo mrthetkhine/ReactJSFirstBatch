@@ -1,0 +1,26 @@
+<html>
+    
+    <script>
+       let func = (a)=> a * a;
+
+       function times(a)
+       {
+           return a * a;
+       }
+       console.log(func(10));
+
+       let hello = ()=>{
+           for(var i=0;i<10;i++)
+           console.log('Hello');
+       };
+       hello();
+
+       let loop = (counter,func)=>{
+            for(var i=0;i<counter;i++)
+            {
+                func();
+            }
+       };
+       loop(3,hello);
+    </script>
+</html>
