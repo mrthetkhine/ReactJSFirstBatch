@@ -1,0 +1,13 @@
+<html>
+    
+    <script>
+        let iterable = [10,20,30];
+        let iterator = iterable[Symbol.iterator]();
+
+        console.log("Iterator ",iterator);
+        for(let result = iterator.next() ; !result.done; result=iterator.next())
+        {
+            console.log("Result ",result.value);
+        }
+    </script>
+</html>
