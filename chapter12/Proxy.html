@@ -1,0 +1,27 @@
+<html>
+    
+    <script>
+        var target = {
+            name : 'Something'
+        };
+        var handler = {
+            get : function (receiver,name)
+            {
+                console.log('Receiver ',receiver);
+                return `Hello ${name}`;
+            },
+            
+        };
+        var target = function () { return 'I am the target'; };
+        var handler = {
+        apply: function (receiver, ...args) {
+            console.log("Handler invoked");
+            return 'I am the proxy';
+        }
+        };
+
+        var p = new Proxy(target, handler);
+        
+        console.log(p() === 'I am the proxy');
+    </script>
+</html>
