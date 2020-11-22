@@ -1,0 +1,35 @@
+<html>
+    <h1 id='headerOne'>
+        Hello
+    </h1>
+    <script>
+      
+      var x = 10;
+        var intervalTimer = setInterval(()=>{
+            console.log("Set interval ");
+            x+=10;
+            document.getElementById('headerOne').innerHTML = x;
+
+            if(x > 100)
+            {
+                clearInterval(intervalTimer);
+            }
+        },1000);
+        setTimeout(()=>{
+            console.log('start timeout 1000');
+            },1000);
+        setTimeout(()=>{
+            console.log('start timeout 2000');
+            },2000);    
+        setTimeout(()=>{
+            console.log('start timeout 3000');
+            },3000);
+        /*
+        while(true)
+        {
+            console.log("Log");
+        }
+        */
+        console.log('Hello');
+    </script>
+</html>

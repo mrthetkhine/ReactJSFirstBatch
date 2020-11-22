@@ -4,7 +4,18 @@
       
       var obj = {
           name : "TK",
+          birthdDate : new Date(),
           age : 36,
+          toJSON:function()
+          {
+            console.log("To JSON called");
+            
+            return {
+                myName : this.name,
+                birthdDate : this.birthdDate.getTime(),
+            }
+            //return this;
+          },
           display: function()
           {
               console.log("Hello");

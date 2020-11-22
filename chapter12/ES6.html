@@ -1,0 +1,19 @@
+<html>
+    
+    <script>
+        function getTuple()
+        {
+            return [10,20];
+        }
+        let arr = [1,2,3,4,5];
+        var [first,...last] = [...arr];
+        console.log("Spread operator ", ...arr);
+        console.log("First ",first, " last ",last);
+
+        var newArray = [...arr,10];
+        console.log("New Array ",newArray);
+
+        var [first,second] = getTuple();
+        console.log("First ",first, " Second ",second);
+    </script>
+</html>
