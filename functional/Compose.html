@@ -1,0 +1,16 @@
+<html>
+    <script>
+         const compose = (a,b) => (c)=>a(b(c));
+         function compose2(a,b)
+         {
+             return function(c)
+             {
+                 return a(b(c));
+             }
+         }
+         const addOne=(number)=>number +1;
+         const doubleOf = (number)=>number *2;
+         const doubleOfAddOne = compose(doubleOf,addOne);
+         console.log(doubleOfAddOne(4));
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <script>
+         const get_double = x => x * x;
+         /*
+         function get_double(x)
+         {
+             return x*x;
+         }
+         */  
+         console.log(get_double(4));
+
+         const add = (x,y)=> x+y;
+         console.log(add(2,3));
+         const div = (x,y)=>{
+             console.log("This ",this);
+             console.log("X ",x , " y ",y);
+             return x/y;
+         }
+         console.log(div(10,2));
+
+
+         function second_order(first_order)
+         {
+             console.log("Second order");
+             return first_order();
+         }
+
+         
+         function first_order()
+         {
+             return "Hello";
+         }
+         const second = first => {
+             console.log("Second order");
+             return first();
+         }
+         console.log(second(first_order));
+    </script>
+</html>

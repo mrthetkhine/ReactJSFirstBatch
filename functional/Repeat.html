@@ -1,0 +1,24 @@
+<html>
+    <script>
+         const repeat = (num,fun) => (num>0)?
+                                        (repeat(num-1,fun),fun(num))
+                                        :undefined;
+
+         repeat(3,()=>console.log('Hello'));
+
+         function loop(num, fun)
+         {
+             if(num>0)
+             {
+                 repeat(num-1,fun);
+                 fun();
+
+             }
+             else
+             {
+                 return undefined;
+             }
+         }
+         loop(3,()=>console.log('Hello'));
+    </script>
+</html>

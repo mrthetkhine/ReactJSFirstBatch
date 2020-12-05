@@ -1,0 +1,10 @@
+<html>
+    <script>
+         const not = (fun)=> (x)=>!fun(x);
+         const isOdd = (x)=> x%2!=0;
+         const isEven = not(isOdd);
+         console.log("Is Odd 3 ",isOdd(3));
+         console.log("Is Odd 4 ",isOdd(4));
+         console.log("Is Even 3 ",isEven(3));
+    </script>
+</html>
