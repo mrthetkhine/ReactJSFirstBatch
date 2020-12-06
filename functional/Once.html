@@ -1,0 +1,16 @@
+<html>
+    <script>
+        const once = (fn)=>
+        {
+            let done = false;
+            return function()
+            {
+                return done?void 0: ((done = true), fn.apply(this, arguments));
+            }
+        }
+        const hello =()=>console.log('Hello');
+        const helloOnce = once(hello);
+        helloOnce();
+        helloOnce();
+    </script>
+</html>
