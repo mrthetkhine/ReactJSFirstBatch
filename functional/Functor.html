@@ -1,0 +1,19 @@
+<html>
+    <script>
+       var counter = 0;
+       count = counter + 1; 
+
+       //Functor 
+       //Container, Lift
+       //Map
+
+        const Functor = (v)=>({
+            value: v,
+            map : (f)=>Functor(f(v))
+        });
+        var counter = Functor(1);
+        var two = counter.map(x=>x+1)
+                         .map(x=> x * x);
+        console.log("Two ", two.value);
+    </script>
+</html>

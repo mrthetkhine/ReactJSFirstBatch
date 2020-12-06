@@ -1,0 +1,27 @@
+<html>
+    <script>
+       const K = (x) => (y)=> x;
+       const tap = (value)=>
+        (fn)=>(
+            typeof(fn)==='function' && fn(value),value
+        ) 
+        const result = tap('espresso')((it)=>{
+            console.log(`Our drink is ${it}`);
+        })
+        console.log(result);
+
+        const compose = (a,b) => (c)=>a(b(c));
+         function compose2(a,b)
+         {
+             return function(c)
+             {
+                 return a(b(c));
+             }
+         }
+         const addOne=(number)=>number +1;
+         const doubleOf = (number)=>number *2;
+         const logger = (value)=>{console.log('value is',value);return value;}
+         const doubleOfAddOne = compose(doubleOf,addOne);
+         console.log(doubleOfAddOne(4));
+    </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <script>
+       console.log([1,2,3].map(parseFloat));
+       [1,2,3].map(console.log);
+       console.log([1,2,3].map(parseInt));
+
+       const unary = (fn)=>
+        fn.length ===1
+        ?fn
+        : function (something){
+            return fn.call(this,something);
+        }
+
+        console.log([1,2,3].map(unary(parseInt)));
+
+    </script>
+</html>

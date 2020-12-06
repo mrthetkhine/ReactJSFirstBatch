@@ -1,0 +1,14 @@
+<html>
+    <script src="ramda.js"></script>
+    <script>
+       
+        const add1 = x => x + 1;
+        const multiplyBy2 = x => x * 2;
+        const add1AndMultiplyBy2 = R.pipe(
+            add1,
+            R.tap(x => console.log('WTF', x)),
+            multiplyBy2,
+            );
+        console.log(add1AndMultiplyBy2(4));
+    </script>
+</html>
