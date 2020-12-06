@@ -9,12 +9,13 @@
 
         const Functor = (v)=>({
             value: v,
-            map : (f)=>Functor(f(v))
+            map : (f)=>Functor(f(v)),
+            valueOf:()=>v
         });
         var counter = Functor(1);
         var two = counter.map(x=>x+1)
                          .map(x=> x * x);
-        console.log("Two ", two.value);
+        console.log("Two ", two);
 
         const trace = x => {
         console.log(x);
@@ -24,7 +25,8 @@
         const u = Functor(2);
         u.map(x=>x)
          .map(trace);
-
-
+        const value = u + two;
+        console.log("Value ", value)
+        console.log("Counter ",counter);
     </script>
 </html>

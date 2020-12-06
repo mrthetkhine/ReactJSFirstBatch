@@ -1,0 +1,35 @@
+<html>
+    <script>
+       var data ;
+       /*
+       const toUpper = (value)=>value.toUpperCase();
+       console.log(toUpper(data));
+       */
+
+       const isSomething =(value)=>value !== null && value != void 0;
+       const checkForSomething = (value)=>{
+           if( isSomething(value))
+           {
+               console.log("Processing ")
+           }
+       } 
+       const maybe = (fn)=>
+        function (...args)
+        {
+            if(args.length===0)
+            {
+                return;
+            }
+            else
+            {
+                for(let arg of args)
+                {
+                    if(arg ==null)return;
+                }
+                return fn.apply(this,args);
+            }
+        }
+        console.log(maybe((a,b,c)=> a+b+c)(1,2,3));
+        console.log(maybe((a,b,c)=> a+b+c)(1,null,3));
+    </script>
+</html>
