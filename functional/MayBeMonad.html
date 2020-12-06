@@ -1,6 +1,12 @@
 <html>
     <script>
-       
+       const MayBe = (function()
+       {
+            const Some = function (x){ this.x = x};
+            Some.prototype.fmap = function (fn) { return Maybe.of(fn(this.x)); };
+            Some.prototype.bind = function(fn){ return fn(this.x);};
+            Some.prototype.toString = function () { return `Some(${this.x})`; };
+       })();
        
     </script>
 </html>
