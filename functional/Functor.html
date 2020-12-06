@@ -15,5 +15,16 @@
         var two = counter.map(x=>x+1)
                          .map(x=> x * x);
         console.log("Two ", two.value);
+
+        const trace = x => {
+        console.log(x);
+        return x;
+        };
+
+        const u = Functor(2);
+        u.map(x=>x)
+         .map(trace);
+
+
     </script>
 </html>
