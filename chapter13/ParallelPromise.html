@@ -1,0 +1,19 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let url1 = "https://jsonplaceholder.typicode.com/todos/1";
+        let url2 = "https://jsonplaceholder.typicode.com/todos/2";
+        
+        const urls = [url1,url2];
+        var promises = urls.map(url=> 
+                                fetch(url)
+                                .then(r=>r.json())
+                                );
+        Promise.all(promises)
+                .then(users=>{
+                    console.log("Promise all body ",users);
+                });
+    </script>
+</html>
