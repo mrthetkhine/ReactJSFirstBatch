@@ -1,0 +1,18 @@
+<html>
+
+    <script>
+        function method1()
+        {
+            console.log('Method run');
+            return "Result";
+        }
+        function invoke()
+        {
+            console.log("Invoke by set timeout");
+        }
+        setTimeout(invoke,1000);
+        
+        var result = method1();
+        console.log("Finished");
+    </script>
+</html>
