@@ -1,0 +1,33 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        function callAjax(callback)
+        {
+            let url = "https://jsonplaceholder.typicode.com/todos/1";
+            let request = new XMLHttpRequest();
+            request.open("GET",url);
+            request.send();
+
+            request.onload = function()
+            {
+                console.log("Request status ", request.status);
+                if(request.status == 200)
+                {
+                    callback(request.responseText);
+                }
+            }
+            request.onerror = function()
+            {
+                callback(e.type);
+            }
+        }
+        function callback(content)
+        {
+            console.log("Ajax ok content>>",content);
+            
+        }
+        callAjax(callback);
+    </script>
+</html>
