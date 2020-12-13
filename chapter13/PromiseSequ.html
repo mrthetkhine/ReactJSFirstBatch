@@ -1,0 +1,30 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let url1 = "https://jsonplaceholder.typicode.com/todos/1";
+       
+        function callback(content)
+        {
+            console.log("Ajax ok content>>",content);
+            
+        }
+        fetch(url1)
+        .then(response=>{
+            console.log("URL 1  ",response.json());
+            let url2 = "https://jsonplaceholder.typicode.com/todos/2";
+            fetch(url2)
+            .then( response2=>{
+                console.log("URl 2 ",response2.json());
+                let url3 = "https://jsonplaceholder.typicode.com/todos/3";
+                fetch(url3)
+                .then(response3=>{
+                    console.log("URl 3", response3.json());
+                });
+            })
+
+        })
+        
+    </script>
+</html>
