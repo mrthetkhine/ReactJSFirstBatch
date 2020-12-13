@@ -1,0 +1,18 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        var obj = {
+            name : "Tk",
+            _age : 36
+        };
+        var html = "<li>"+ obj.name + "</li>"
+                    + "<li>"+obj._age+"</li>";
+        console.log("HTml ",html);            
+        var template = `<li>${obj.name}</li>
+                        <li>${obj._age}</li>
+                        `;
+        console.log('Template ',template);                
+    </script>
+</html>

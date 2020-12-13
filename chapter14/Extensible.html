@@ -1,0 +1,19 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        var obj = {
+            name : "Tk",
+            _age : 36
+        };
+        Object.preventExtensions(obj);
+        console.log("Is extensible ", Object.isExtensible(obj));
+        
+        Object.freeze(obj);
+        
+        obj.name = "Aung Aung";
+        console.log("Obj ",obj);
+        console.log("Is Frozen ", Object.isFrozen(obj));
+    </script>
+</html>

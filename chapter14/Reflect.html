@@ -1,0 +1,18 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        var obj = {
+            name : "Tk",
+            age : 36
+        };
+        var obj2 = {
+            display:function()
+            {
+                console.log("Name ",this.name, " Age ",this.age);
+            }
+        }  
+        Reflect.apply(obj2.display,obj,[]);    
+    </script>
+</html>
