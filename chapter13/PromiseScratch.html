@@ -1,0 +1,25 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        function wait(duration)
+        {
+            return new Promise((resolve,reject)=>{
+                if(duration<0)
+                {
+                    reject(new Error("Time travel not implement"));
+                }
+                else
+                {
+                    setTimeout(resolve(duration),duration);
+                }
+            });
+        }
+        var p = wait(1000);
+        //p = wait(-19);
+        p.then(response=>{
+            console.log("Response ",response);
+        }).catch(err=>console.log(err));
+    </script>
+</html>
