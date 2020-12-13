@@ -1,0 +1,32 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        var obj = {
+            name : "Tk",
+            age : 36
+        }
+        console.log(Object.getOwnPropertyDescriptor(obj,'name'));
+        const random = {
+            get octet() { return Math.floor(Math.random()*256); },
+        };
+        console.log(Object.getOwnPropertyDescriptor(random,'octet'));
+        Object.defineProperty(obj,"school",{
+            value :"UCSY",
+            writable:false,
+            enumerable : false,
+            configurable : false
+        })
+        console.log(obj);
+        obj.school = "GTC";
+        console.log(obj);
+        for(var p in obj)
+        {
+            console.log("Property p ",p);
+        }
+        Object.defineProperty(obj, "school", { writable: false });
+        obj.school= "UCSK";
+        console.log("Obj ",obj);
+    </script>
+</html>

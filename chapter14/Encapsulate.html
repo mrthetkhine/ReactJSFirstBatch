@@ -1,0 +1,28 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        var obj = {
+            name : "Tk",
+            _age : 36
+        };
+
+        function encapsulate(obj)
+        {
+            for(var p in obj)
+            {
+                if(p.charAt(0) == '_')
+                {
+                    Object.defineProperty(obj,p,{
+                        value : obj[p],
+                        writable : false
+                    });
+                }
+            }
+        }
+        encapsulate(obj);
+        obj._age = 25;
+        console.log("Obj ",obj);
+    </script>
+</html>

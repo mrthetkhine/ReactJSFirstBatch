@@ -1,0 +1,22 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        async function call()
+        {
+            let url1 = "https://jsonplaceholder.typicode.com/todos/1";
+            var response = await fetch(url1);// prmoise().then(yeild response);
+            console.log(await response.json());
+            //console.log(response);
+            console.log("last statement ");
+            return 30;
+        }
+        
+        var p = call();
+        console.log("P ",p);
+        p.then(data=>{
+            console.log("Value ",data);
+        })
+    </script>
+</html>
