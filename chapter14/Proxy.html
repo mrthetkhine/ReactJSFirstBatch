@@ -13,5 +13,13 @@
         p.z = 3;
         console.log("T.z ",t.z);
 
+        function accessDB()
+        {
+            return 42;
+        }
+        let {proxy,revoke} = Proxy.revocable(accessDB,{});
+        console.log(proxy());
+        revoke();
+        console.log(proxy());
     </script>
 </html>
