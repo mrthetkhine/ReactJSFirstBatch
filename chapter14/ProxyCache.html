@@ -1,0 +1,35 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let target = {
+            load : function()
+            {
+                console.log("Loaded from database");
+                return ['a','b','c'];
+            }
+        }
+        let proxy = new Proxy (target,{
+            data_cache : null,
+            get(o,name,taget)
+            {
+                console.log('O ',o ,' Name ',name ,' Target ',target);
+                if(name == 'data' && this.data_cache)
+                {
+                    console.log('return from cached');
+                    return this.data_cache;
+                }
+                else
+                {
+                    this.data_cache = target.load();
+                    return this.data_cache;
+                }
+                
+                return name;
+            }
+        });
+        console.log(proxy.data);
+        console.log(proxy.data);
+    </script>
+</html>
