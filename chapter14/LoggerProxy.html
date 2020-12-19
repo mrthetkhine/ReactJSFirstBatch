@@ -1,0 +1,27 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let model = {
+            age : 20,
+            
+        }
+        let proxy = new Proxy (model,{
+            get:(target,name)=>
+            {
+                console.log("Getting value to",name )
+            },
+           set: (target,name,value)=>
+           {
+               console.log("Setting value to prop", name , ' with value ',value);
+               target[name] = value;
+               return true;
+           }
+        });
+        proxy.age = 20;
+        //console.log("Setting 20 ");
+        proxy.age = 36;
+        console.log("After setting ",model.age);
+    </script>
+</html>
