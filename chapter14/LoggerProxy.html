@@ -5,12 +5,20 @@
     <script>
         let model = {
             age : 20,
-            
+            display:function()
+            {
+                console.log("Displayed");
+            }
         }
         let proxy = new Proxy (model,{
             get:(target,name)=>
             {
-                console.log("Getting value to",name )
+                //console.log("Getting value to",name );
+                if( typeof target[name] === "function")
+                {
+                    console.log("Method ",name , " Invoked");
+                }
+                return target[name];
             },
            set: (target,name,value)=>
            {
@@ -23,5 +31,6 @@
         //console.log("Setting 20 ");
         proxy.age = 36;
         console.log("After setting ",model.age);
+        proxy.display();
     </script>
 </html>
