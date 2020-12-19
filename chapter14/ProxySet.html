@@ -1,0 +1,28 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let model = {
+            age : 20,
+            changeView : function()
+            {
+                console.log("Change View");
+            }
+        }
+        let proxy = new Proxy (model,{
+           set (o,name,value,target)
+           {
+               console.log("Object ", o, " Name ",name, " Value ", value, "Target ",target);
+               if(target[name] != value)
+               {
+                target.changeView();
+               }
+           }
+        });
+        proxy.age = 20;
+        console.log("Setting 20 ");
+        proxy.age = 36;
+        console.log("After setting ");
+    </script>
+</html>
