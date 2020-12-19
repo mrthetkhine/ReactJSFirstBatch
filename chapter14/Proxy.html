@@ -1,0 +1,17 @@
+<html>
+    <body>
+       
+    </body>
+    <script>
+        let t = { x : 1 , 
+                  y : 2
+                };
+        let p = new Proxy(t,{});        
+        console.log("p.x ",p.x);
+        delete p.y;
+        console.log("T.y ", t.y);
+        p.z = 3;
+        console.log("T.z ",t.z);
+
+    </script>
+</html>
