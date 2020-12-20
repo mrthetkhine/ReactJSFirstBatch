@@ -10,9 +10,20 @@
         <div >
             Hello
         </div>
-        <p class="title">
+        <p class="title" lang="en">
             P Title
         </p>
+        <p>
+            Another p
+        </p>
+        <div id="container">
+            <p>
+                Container P1
+               
+            </p>
+            <div> Some div  <P> Inner Child</P> </div>
+            <p> Contiane rP2</p>
+        </div>
     </body>
     <script>
         "use strict";
@@ -24,5 +35,14 @@
 
         var divWithClassTitle = document.querySelectorAll(".title");
         console.log(divWithClassTitle);
+
+        var enLang = document.querySelectorAll("p[lang='en']");
+        console.log("Eng Lang ",enLang);
+
+        var allPUnderContainer = document.querySelectorAll("#container p");
+        console.log("AllPU ",allPUnderContainer);
+
+        var allPDirect = document.querySelectorAll("#container>p");
+        console.log("All P Direct", allPDirect);
     </script>
 </html>
