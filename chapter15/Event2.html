@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <button type="button" id="btnHello">Hello</button>
+    </body>
+    <script>
+        console.log('Btn Hello ',btnHello);
+        var btn = document.querySelector("#btnHello");
+        btn.onclick = function()
+        {
+            console.log("Button onclick bind with onclick");
+        };
+        btn.onclick = function()
+        {
+            console.log("Button onclick bind with onclick 2");
+        };
+        btn.addEventListener("click",(e)=>{
+            console.log("Button bind with addEvent Listener",e);
+            e.stopImmediatePropagation();
+        })
+        btn.addEventListener("click",()=>{
+            console.log("Button bind with addEvent Listener 2");
+        })
+
+        var body = document.querySelector("body");
+        body.addEventListener("click",function()
+        {
+            console.log("Body bind with addEvent Listener ");
+        })
+    </script>
+</html>
