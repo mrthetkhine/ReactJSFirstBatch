@@ -1,0 +1,30 @@
+<html>
+    <body>
+        
+
+        <button type="button" id="btnHello" onclick="console.log('Btn Hello Click')">Hello</button>
+        <button type="submit" id="btnRemove">Submit</button>
+        <div class="title" name="color">
+            Title
+        </div>
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li id="three">Three</li>
+        </ul>
+        
+    </body>
+    <script>
+        "use strict";
+        var liveElements = document.getElementsByClassName("list-item");
+        const notLiveElements = document.querySelectorAll('.list-item');
+
+        console.log("Live Element", liveElements.length); // length of 2
+        console.log("Not live", notLiveElements.length); // length of 2 
+
+        document.getElementById('three').className = 'list-item';
+
+        console.log("Live Element ",liveElements.length); // length of 3
+        console.log("Not live ",notLiveElements.length); // length of 2
+    </script>
+</html>
