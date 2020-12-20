@@ -15,16 +15,20 @@
         };
         btn.addEventListener("click",(e)=>{
             console.log("Button bind with addEvent Listener",e);
-            e.stopImmediatePropagation();
+            //e.stopImmediatePropagation();
         })
         btn.addEventListener("click",()=>{
             console.log("Button bind with addEvent Listener 2");
         })
 
         var body = document.querySelector("body");
-        body.addEventListener("click",function()
+        body.addEventListener("click",function(e)
         {
-            console.log("Body bind with addEvent Listener ");
+            console.log("Body bind with addEvent Listener ",e);
+            if(e.target != this)
+            {
+                console.log("Do not handle");
+            }
         })
     </script>
 </html>
