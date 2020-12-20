@@ -1,0 +1,28 @@
+<html>
+    <body>
+        
+
+        <button type="button" id="btnHello" onclick="console.log('Btn Hello Click')">Hello</button>
+        <button type="submit" id="btnRemove">Submit</button>
+        <div class="title">
+            Title
+        </div>
+        <div >
+            Hello
+        </div>
+        <p class="title">
+            P Title
+        </p>
+    </body>
+    <script>
+        "use strict";
+        
+        var btnHello = document.querySelector('#btnHello');
+        console.log('Btn Hello ',btnHello);
+        var allButton = document.querySelectorAll("button");
+        console.log("All button ",allButton);
+
+        var divWithClassTitle = document.querySelectorAll(".title");
+        console.log(divWithClassTitle);
+    </script>
+</html>
