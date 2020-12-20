@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button id="btnHello" type="button">Hello</button>
+    </body>
+    <script>
+        var btn = document.querySelector("#btnHello");
+        btn.addEventListener("click",(e)=>{
+            console.log("Btn handle click");
+        },{
+            capture: true,
+            once: true,
+            passive: true
+        });
+        var body = document.querySelector("body");
+        body.addEventListener("click", (e)=>{
+            console.log("Body handle click ");
+        },{
+            capture: true,
+            once: true,
+            passive: true
+        });
+    </script>
+</html>

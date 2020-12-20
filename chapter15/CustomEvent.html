@@ -1,0 +1,20 @@
+<html>
+    <body>
+        
+
+        <button type="button" id="btnHello">Hello</button>
+        <button type="submit" id="btnRemove">Submit</button>
+        <a href="http://www.google.com" id="lnkGoogle">Google</a>
+    </body>
+    <script>
+        "use strict";
+        
+        document.addEventListener("downloadCompleted",function(e)
+        {
+            console.log("Download complete event listener");
+        });
+        document.dispatchEvent(new CustomEvent("downloadCompleted",{
+            detail : false
+        }));
+    </script>
+</html>

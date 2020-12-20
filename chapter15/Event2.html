@@ -1,8 +1,10 @@
 <html>
     <body>
         <button type="button" id="btnHello">Hello</button>
+        <button type="button" id="btnRemove">Remove</button>
     </body>
     <script>
+        "use strict";
         console.log('Btn Hello ',btnHello);
         var btn = document.querySelector("#btnHello");
         btn.onclick = function()
@@ -13,10 +15,11 @@
         {
             console.log("Button onclick bind with onclick 2");
         };
-        btn.addEventListener("click",(e)=>{
+        function btnHelloClick (e)
+        {
             console.log("Button bind with addEvent Listener",e);
-            //e.stopImmediatePropagation();
-        })
+        };
+        btn.addEventListener("click",btnHelloClick);
         btn.addEventListener("click",()=>{
             console.log("Button bind with addEvent Listener 2");
         })
@@ -30,5 +33,10 @@
                 console.log("Do not handle");
             }
         })
+
+        var btnRemove = document.querySelector("#btnRemove");
+        btnRemove.addEventListener("click",(e)=>{
+            btn.removeEventListener("click",btnHelloClick);
+        });
     </script>
 </html>
