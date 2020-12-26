@@ -1,0 +1,30 @@
+<html>
+    
+    <body>
+        
+        <div id="myDiv" class="c1" data-count-no="10">
+            Hello
+        </div>
+       
+
+    </body>
+    <script>
+        "use strict";
+        var div = document.getElementById("myDiv");
+        
+        for( var i=0; i< 1000;i++)
+        {
+            let par = document.createElement("p");
+           
+            let em = document.createElement("em");
+            em.append("World");
+
+            par.append("Hello",em,"!");
+            div.appendChild(par);
+
+            //par.addEventListener('click',(e)=>console.log("i ",i , " e ", e));
+        }
+        par.addEventListener('click',(e)=>console.log(e));
+       
+    </script>
+</html>
