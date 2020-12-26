@@ -11,14 +11,20 @@
     <script>
         "use strict";
         var div = document.getElementById("myDiv");
-        /*
-        let par = document.createElement("p");
+        
+        for( var i=0; i< 1000;i++)
+        {
+            let par = document.createElement("p");
+            let par2 = document.createElement("p");
+            par.appendChild(par2);
+            let em = document.createElement("em");
+            em.append("World");
 
-        let em = document.createElement("em");
-        em.append("World");
-
-        par.append("Hello",em,"!");
-        */
+            par.append("Hello",em,"!");
+            div.appendChild(par);
+        }
+        
+        
         //div.appendChild(par);
         //div.after(par);
         //div.before(par);
