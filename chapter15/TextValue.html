@@ -1,0 +1,29 @@
+<html>
+    <body>
+        
+
+        
+        <span id="divTitle" class="title" name="color">
+            Title 1
+           
+        </span>
+        <ul id="title">
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li id="three">Three</li>
+        </ul>
+        <p>
+            Next element sibling
+        </p>
+    </body>
+    <script>
+        "use strict";
+        var title = document.getElementById("title");
+       
+        var divTitle = document.getElementById("divTitle");
+        console.log("Node type ",divTitle.nodeType);
+        console.log("Children ",divTitle.children);
+        console.log("Node value ",divTitle.childNodes[0].nodeValue);
+        console.log("Node name ",divTitle.nodeName);
+    </script>
+</html>

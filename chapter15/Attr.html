@@ -1,0 +1,33 @@
+<html>
+    <style>
+        .c1
+        {
+            background:blue;
+        }
+        .c2
+        {
+            background:black;
+        }
+    </style>
+    <body>
+        
+        <div id="myDiv" class="c1">
+            Hello
+        </div>
+      <img id="myImage">
+
+    </body>
+    <script>
+        "use strict";
+        var img = document.getElementById("myImage");
+        myImage.src = "https://wiki.d-addicts.com/images/0/0a/Liu_Yi_Fei.jpg";
+        myImage.width = 200;
+
+        var myDiv = document.getElementById("myDiv");
+        myDiv.style.color = "green";
+        myDiv.style.width = 200;
+        console.log("Class ",myDiv.classList);
+        myDiv.classList.remove("c1");
+        myDiv.classList.add("c2");
+    </script>
+</html>
