@@ -5,7 +5,7 @@
         <div id="myDiv" class="c1" data-count-no="10">
             Hello
         </div>
-      
+        <p id="myP">Hello paragraph</p>
 
     </body>
     <script>
@@ -13,7 +13,12 @@
         var div = document.getElementById("myDiv");
         var count = div.dataset.countNo;
         console.log("Count ", count , " type of count ", typeof count);
-        //div.innerHTML = "<h1>Hello</h1>";
-        div.outerHTML = "<h1>Change</h1>";
+        div.innerHTML = "<h1>Hello</h1>";
+        /*
+        div.outerHTML = "<h1><script>alert('Woo')</ script>Change</h1>";
+        div.innerHTML = "<h1><script>alert('Woo')</ script>Change</h1>";
+        */
+        var par = document.getElementById("myP");
+        par.textContent = "Change";
     </script>
 </html>

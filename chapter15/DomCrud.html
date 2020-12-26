@@ -1,0 +1,23 @@
+<html>
+    
+    <body>
+        
+        <div id="myDiv" class="c1" data-count-no="10">
+            Hello
+        </div>
+       
+
+    </body>
+    <script>
+        "use strict";
+        var div = document.getElementById("myDiv");
+        let par = document.createElement("p");
+
+        let em = document.createElement("em");
+        em.append("World");
+
+        par.append("Hello",em,"!");
+        div.appendChild(par);
+
+    </script>
+</html>
