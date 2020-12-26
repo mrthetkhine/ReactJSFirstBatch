@@ -1,0 +1,19 @@
+<html>
+    
+    <body>
+        
+        <div id="myDiv" class="c1" data-count-no="10">
+            Hello
+        </div>
+      
+
+    </body>
+    <script>
+        "use strict";
+        var div = document.getElementById("myDiv");
+        var count = div.dataset.countNo;
+        console.log("Count ", count , " type of count ", typeof count);
+        //div.innerHTML = "<h1>Hello</h1>";
+        div.outerHTML = "<h1>Change</h1>";
+    </script>
+</html>
