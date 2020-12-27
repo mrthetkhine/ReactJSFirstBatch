@@ -1,0 +1,24 @@
+<html>
+    
+    <body>
+        
+     Storage
+      <button type="button" id="btnClickMe">Click Me</button>
+
+    </body>
+    <script>
+        "use strict";
+        console.log("Worker ",typeof Worker !== "undefined");
+        var btn = document.getElementById("btnClickMe");
+        for(var i=0;i< 90000000000; i++)
+        {
+            Math.random();
+            Math.sin(19);
+        }
+        btn.addEventListener("click",function()
+        {
+            aler('No');
+        });
+        
+    </script>
+</html>
