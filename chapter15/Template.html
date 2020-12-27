@@ -1,0 +1,33 @@
+<html>
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- existing data could optionally be included here -->
+  </tbody>
+</table>
+
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+    <script>
+    var tbody = document.querySelector("tbody");
+    var template = document.querySelector('#productrow');
+
+    // Clone the new row and insert it into the table
+    var clone = template.content.cloneNode(true);
+    var td = clone.querySelectorAll("td");
+    td[0].textContent = "Data";
+    td[1].textContent = "Stuff";
+
+    tbody.appendChild(clone);
+
+    </script>
+</html>

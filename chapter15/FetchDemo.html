@@ -1,0 +1,32 @@
+<html>
+    
+    <body>
+        
+       <a href="" id="top"></a> 
+      Hello
+      <button type="button" id="btnGo">Go</button>
+      <button type="button" id="btnBack">Back</button>
+      <button type="button" id="btnForward">Forward</button>
+      
+
+    </body>
+    <script>
+        "use strict";
+        var url = "https://jsonplaceholder.typicode.com/todos/1";
+        fetch(url)
+            .then(response => {
+                console.log("Response ",response);
+                console.log("Header ", response.headers);
+                return response.json();
+            })
+            .then(json=>console.log(json));
+
+        async function load()
+        {
+            let response = await fetch(url);
+            let body = await response.json();
+            console.log("body ",body);
+        }
+        load();
+    </script>
+</html>

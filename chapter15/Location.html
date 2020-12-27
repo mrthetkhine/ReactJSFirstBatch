@@ -1,0 +1,103 @@
+<html>
+    
+    <body>
+        
+       <a href="" id="top"></a> 
+      Hello
+      <button type="button" id="btnGo">Go</button>
+      <button type="button" id="btnBack">Back</button>
+      <button type="button" id="btnForward">Forward</button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <a href="" id="bottom">Bottom</a> 
+
+    </body>
+    <script>
+        "use strict";
+        console.log("Location ",window.location);
+        let url = new URL(window.location);
+        let query = url.searchParams.get("key");
+        console.log("Query key ",query);
+
+        var btn = document.getElementById("btnGo");
+        btn.addEventListener("click",(e)=>{
+            //window.location = "http://www.google.com";
+            window.location="#bottom";
+
+        });
+
+        var btnBack = document.getElementById("btnBack");
+        btnBack.addEventListener("click",(e)=>{
+            //window.location = "http://www.google.com";
+           history.go(-1);
+
+        });
+        var btnForward = document.getElementById("btnForward");
+        btnForward.addEventListener("click",(e)=>{
+            //window.location = "http://www.google.com";
+           history.go(1);
+
+        });
+        window.addEventListener("hashchange",(e)=>{
+            console.log("E ",e);
+        });
+    </script>
+</html>
