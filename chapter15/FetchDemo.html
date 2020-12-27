@@ -13,7 +13,9 @@
     <script>
         "use strict";
         var url = "https://jsonplaceholder.typicode.com/todos/1";
-        fetch(url)
+        var headers = new Headers();
+        headers.set("Content-Type","application/json");
+        fetch(url,{headers: headers})
             .then(response => {
                 console.log("Response ",response);
                 console.log("Header ", response.headers);

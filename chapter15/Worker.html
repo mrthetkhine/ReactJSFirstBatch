@@ -1,0 +1,18 @@
+<html>
+    
+    <body>
+        
+     Storage
+      
+
+    </body>
+    <script>
+        "use strict";
+        console.log("Worker ",typeof Worker !== "undefined");
+        var worker = new Worker("worker.js");
+        worker.onmessage = function(event)
+        {
+            console.log("Worker on message ",event);
+        }
+    </script>
+</html>
