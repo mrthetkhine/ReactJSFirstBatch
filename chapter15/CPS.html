@@ -1,0 +1,34 @@
+<html>
+    
+    <body>
+        
+    CPS
+
+    </body>
+    <script>
+        "use strict";
+        function getMe(callback,error)
+        {
+            setTimeout((e)=>{
+                var rand = (Math.random()* 10) ;
+                if(rand > 5)
+                {
+                    error(rand);
+                }
+                else
+                {
+                    callback(rand);
+                }
+                
+            });
+       
+        }
+        function callBack(value)
+        {
+            console.log("Processing ",value);
+        }
+        getMe(callBack,(e)=>console.log('Error ',e));
+        getMe(console.log,(e)=>console.log('Error ',e));
+        
+    </script>
+</html>
