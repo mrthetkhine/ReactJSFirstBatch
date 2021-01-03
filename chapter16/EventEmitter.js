@@ -10,11 +10,20 @@ function demo()
         });
     },300);
 }
+function another()
+{
+    setTimeout(()=>{
+        console.log('another');
+        emitter.emit("setTimeoutFinished",{
+            name: 'Another'
+        });
+    },5000);
+}
 
 emitter.on('setTimeoutFinished',(data)=>{
     console.log('Data ',data);
     console.log("Event Fired setTimeoutFinished");
 });
-
+another();
 demo();
 console.log("After demo");
