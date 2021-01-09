@@ -5,7 +5,18 @@ async function* asyncGenerator()
         yield i;
     }
 }
+/*
 let i = asyncGenerator();
 console.log(i.next());
 console.log(i.next());
 console.log(i.next());
+console.log(i.next());
+*/
+async function getGenerator()
+{
+    for await(let num of asyncGenerator())
+    {
+        console.log("Num is ",num);
+    }
+}
+getGenerator();
