@@ -1,7 +1,16 @@
 let https = require('https');
 
 let url = 'https://jsonplaceholder.typicode.com/users?_limit=2';
-let request = https.get(url,(res)=>{
+let options = {
+    host: 'jsonplaceholder.typicode.com',
+    path: '/users?_limit=2',
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json'
+      }
+   
+}
+let request = https.request(options,(res)=>{
     if( res.statusCode !== 200)
     {
         console.error(`Did not get an OK from the server. Code: ${res.statusCode}`);
@@ -21,3 +30,4 @@ let request = https.get(url,(res)=>{
 request.on('error',(err)=>{
     console.error(`Encountered an error trying to make a request: ${err.message}`);
 });
+request.end();
