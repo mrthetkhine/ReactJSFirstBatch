@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  background: whitesmoke;
 }
-
+.another-class
+{
+  color:blue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

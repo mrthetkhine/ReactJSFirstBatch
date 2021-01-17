@@ -1,0 +1,16 @@
+class => className
+normal html => small tag
+Custom Component => Capital
+Close tag properly
+
+
+JSX=>Babel Compile=> JS Code
+
+How they do JSX=> JS Code
+React.createElement => JS Object {
+    props: childern=>all child
+}=> Virtual DOM
+
+Virtual DOM => Renderer => Web Page
+
+JSX => createElement => Virtual DOM Node => ReactDom.render => JS DOM API => document.createElement
