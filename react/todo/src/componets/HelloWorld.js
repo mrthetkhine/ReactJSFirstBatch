@@ -18,9 +18,10 @@ function HelloWorld(props)
 export class HelloWorldClassComp extends React.Component
 {
     render() {
+        
         return(
             <h3>
-                {this.props.name}
+               Hello {this.props.name}
             </h3>
         );
     }
