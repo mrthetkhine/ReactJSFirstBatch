@@ -7,7 +7,16 @@ class Counter extends React.Component
         this.state= {
             counter: props.value || 0
         };
+        console.log('Constructor called');
     }
+    componentDidMount() {
+        console.log('Component did mount');
+    }
+
+    componentWillUnmount() {
+        console.log('Component will unmount');
+    }
+
     btnIncCounter()
     {
         console.log('This ',this);
@@ -16,10 +25,11 @@ class Counter extends React.Component
 
         this.setState({
             counter
-        })
+        });
     }
     render()
     {
+        console.log('Render');
         return(
             <div>
                 Counter {this.state.counter}
