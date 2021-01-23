@@ -1,16 +1,29 @@
 import React from 'react';
-
+import ChildComponent from './ChildComponent';
 class Counter extends React.Component
 {
     constructor(props) {
         super(props);
         this.state= {
-            counter: props.value || 0
+            name : 'Counter',
+            counter: props.value || 0,
+
         };
         console.log('Constructor called');
+        this.btnIncCounter = this.btnIncCounter.bind(this);
     }
     componentDidMount() {
         console.log('Component did mount');
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('Component did update');
+    }
+    static getDerivedStateFromError(error) {
+        // Update state so the next render will show the fallback UI.
+        return { hasError: true };
+    }
+    componentDidCatch(error, errorInfo) {
+        console.log('Catch error ',error);
     }
 
     componentWillUnmount() {
@@ -22,19 +35,25 @@ class Counter extends React.Component
         console.log('This ',this);
         console.log('State ', this.state);
         let counter = this.state.counter+1;
-
         this.setState({
-            counter
+            counter : counter +1
+        });
+        this.setState({
+            name: 'Counter '+ (counter +2)
         });
     }
     render()
     {
         console.log('Render');
+
         return(
             <div>
-                Counter {this.state.counter}
+
+                {this.state.name}
                 <br/>
-                <button type="button" onClick={this.btnIncCounter.bind(this)}>Inc</button>
+                <ChildComponent counter={this.state.counter}/>
+                <button type="button" onClick={this.btnIncCounter}>Inc</button>
+
             </div>
         );
     }

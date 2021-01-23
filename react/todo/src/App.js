@@ -5,7 +5,7 @@ import HelloWorld from "./componets/HelloWorld";
 import {HelloWorldClassComp} from "./componets/HelloWorld";
 import UserAvatar from "./componets/UserAvatar";
 import Counter from "./componets/Counter";
-
+import EventDemoComponent from './componets/EventDemoComponent';
 function App() {
     function hello() {
         console.log('Hello function invoked');
@@ -21,13 +21,14 @@ function App() {
     };
     return (
         <div className="App another-class">
-            {hello() + 'How are you'}
+           {/* {hello() + 'How are you'}*/}
 
             {/* <Hello/>*/}
             {/*<HelloWorld color={"blue"}></HelloWorld>
             <HelloWorldClassComp name="How are you"/>*/}
-            <Counter value={5}/>
-            <UserAvatar user={user}/>
+            {/*<Counter value={5}/>
+            <UserAvatar user={user}/>*/}
+            <EventDemoComponent/>
         </div>
     );
 }
