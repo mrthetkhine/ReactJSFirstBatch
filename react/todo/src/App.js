@@ -6,9 +6,12 @@ import {HelloWorldClassComp} from "./componets/HelloWorld";
 import UserAvatar from "./componets/UserAvatar";
 import Counter from "./componets/Counter";
 import EventDemoComponent from './componets/EventDemoComponent';
+import Greeting from "./componets/Greeting";
+import InlineIfComponent from "./componets/InlineIfComponent";
+import ListDemo from "./componets/ListDemo";
 function App() {
     function hello() {
-        console.log('Hello function invoked');
+        console.log('Hello function invoked',this );
         return "Hello World";
     }
 
@@ -28,7 +31,11 @@ function App() {
             <HelloWorldClassComp name="How are you"/>*/}
             {/*<Counter value={5}/>
             <UserAvatar user={user}/>*/}
-            <EventDemoComponent btnToggleClick={hello.bind(this)}/>
+            {/**/}
+            <EventDemoComponent btnToggleClick={hello} />
+            <Greeting isLoggedIn={true}/>
+            <InlineIfComponent name={"Tk"}/>
+            <ListDemo/>
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 export default class EventDemoComponent extends  React.Component
 {
     constructor(props) {
@@ -36,3 +37,6 @@ export default class EventDemoComponent extends  React.Component
         );
     }
 }
+EventDemoComponent.propTypes = {
+    btnToggleClick: PropTypes.func.isRequired
+};
