@@ -7,6 +7,7 @@ export default class EventDemoComponent extends  React.Component
         this.state = {
             isToggleOn : false
         };
+        console.log('On Click from parent ',this.props.btnToggleClick)
     }
     internalMethod()
     {
@@ -21,6 +22,7 @@ export default class EventDemoComponent extends  React.Component
         this.setState((state)=>({
             isToggleOn: !state.isToggleOn
         }));
+        this.props.btnToggleClick();
         //this.internalMethod();
     }
     render() {

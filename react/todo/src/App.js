@@ -28,7 +28,7 @@ function App() {
             <HelloWorldClassComp name="How are you"/>*/}
             {/*<Counter value={5}/>
             <UserAvatar user={user}/>*/}
-            <EventDemoComponent/>
+            <EventDemoComponent btnToggleClick={hello.bind(this)}/>
         </div>
     );
 }
