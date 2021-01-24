@@ -9,6 +9,7 @@ import EventDemoComponent from './componets/EventDemoComponent';
 import Greeting from "./componets/Greeting";
 import InlineIfComponent from "./componets/InlineIfComponent";
 import ListDemo from "./componets/ListDemo";
+import NameForm from "./componets/NameForm";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -32,10 +33,11 @@ function App() {
             {/*<Counter value={5}/>
             <UserAvatar user={user}/>*/}
             {/**/}
-            <EventDemoComponent btnToggleClick={hello} />
+            {/*<EventDemoComponent btnToggleClick={hello} />
             <Greeting isLoggedIn={true}/>
             <InlineIfComponent name={"Tk"}/>
-            <ListDemo/>
+            <ListDemo/>*/}
+            <NameForm/>
         </div>
     );
 }
