@@ -10,6 +10,7 @@ import Greeting from "./componets/Greeting";
 import InlineIfComponent from "./componets/InlineIfComponent";
 import ListDemo from "./componets/ListDemo";
 import NameForm from "./componets/NameForm";
+import WelcomeDialog from './componets/Containment/Dialog';
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -37,7 +38,8 @@ function App() {
             <Greeting isLoggedIn={true}/>
             <InlineIfComponent name={"Tk"}/>
             <ListDemo/>*/}
-            <NameForm/>
+          {/*  <NameForm/>*/}
+            <WelcomeDialog/>
         </div>
     );
 }

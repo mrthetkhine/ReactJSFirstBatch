@@ -47,3 +47,9 @@
   height:80px;
   border-radius: 40px;
 }
+.fancy-border
+{
+  border:1px solid lightblue;
+  margin:10px;
+  padding:10px;
+}
