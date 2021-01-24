@@ -11,6 +11,7 @@ import InlineIfComponent from "./componets/InlineIfComponent";
 import ListDemo from "./componets/ListDemo";
 import NameForm from "./componets/NameForm";
 import WelcomeDialog from './componets/Containment/Dialog';
+import HocDemo from "./componets/hoc/HocDemo";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -39,7 +40,8 @@ function App() {
             <InlineIfComponent name={"Tk"}/>
             <ListDemo/>*/}
           {/*  <NameForm/>*/}
-            <WelcomeDialog/>
+          {/*  <WelcomeDialog/>*/}
+              <HocDemo/>
         </div>
     );
 }
