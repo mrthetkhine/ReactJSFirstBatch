@@ -51,7 +51,7 @@ function App() {
            {/* {<Mouse/>}*/}
            {/* <MouseWithCat></MouseWithCat>*/}
           {/* <MouseTrackerWithRenderProps/>*/}
-            {<DynamicComponent userType={"admin"}/>}
+            {<DynamicComponent userType={"admin1"}/>}
         </div>
     );
 }

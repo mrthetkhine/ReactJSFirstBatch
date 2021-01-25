@@ -20,7 +20,7 @@ const mapping = {
 }
 export default function DynamicComponent(props)
 {
-    const Component = mapping[props.userType];
+    const Component = mapping[props.userType] || User;
     return(
         <div>
                 Hello
