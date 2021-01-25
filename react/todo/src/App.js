@@ -12,6 +12,10 @@ import ListDemo from "./componets/ListDemo";
 import NameForm from "./componets/NameForm";
 import WelcomeDialog from './componets/Containment/Dialog';
 import HocDemo from "./componets/hoc/HocDemo";
+import MouseTracker from "./componets/render_prop/MouseTracker";
+import Mouse from "./componets/render_prop/Mouse";
+import MouseWithCat from "./componets/render_prop/MouseWithCat";
+import MouseTrackerWithRenderProps from "./componets/render_prop/MouseTrackerWithRenderProps";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -41,7 +45,11 @@ function App() {
             <ListDemo/>*/}
           {/*  <NameForm/>*/}
           {/*  <WelcomeDialog/>*/}
-              <HocDemo/>
+             {/* <HocDemo/>*/}
+            {/*<MouseTracker/>*/}
+           {/* {<Mouse/>}*/}
+           {/* <MouseWithCat></MouseWithCat>*/}
+           <MouseTrackerWithRenderProps/>
         </div>
     );
 }
