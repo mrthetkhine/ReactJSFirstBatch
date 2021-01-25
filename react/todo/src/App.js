@@ -16,6 +16,7 @@ import MouseTracker from "./componets/render_prop/MouseTracker";
 import Mouse from "./componets/render_prop/Mouse";
 import MouseWithCat from "./componets/render_prop/MouseWithCat";
 import MouseTrackerWithRenderProps from "./componets/render_prop/MouseTrackerWithRenderProps";
+import DynamicComponent from "./componets/jsx_indepth/DynamicComponent";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -49,7 +50,8 @@ function App() {
             {/*<MouseTracker/>*/}
            {/* {<Mouse/>}*/}
            {/* <MouseWithCat></MouseWithCat>*/}
-           <MouseTrackerWithRenderProps/>
+          {/* <MouseTrackerWithRenderProps/>*/}
+            {<DynamicComponent userType={"admin"}/>}
         </div>
     );
 }
