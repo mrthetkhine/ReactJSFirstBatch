@@ -19,6 +19,8 @@ import MouseTrackerWithRenderProps from "./componets/render_prop/MouseTrackerWit
 import DynamicComponent from "./componets/jsx_indepth/DynamicComponent";
 import CustomTextInput from "./componets/ref_demo/CustomTextInput";
 import AutoFocusTextInput from "./componets/ref_demo/AutoFocusTextInput";
+import Table from "./componets/fragment/Table";
+import {DatePicker} from "./componets/third_party/DatePicker";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -57,9 +59,11 @@ function App() {
            {/* {
                 <CustomTextInput/>
             }*/}
-            {
+          {/*  {
                 <AutoFocusTextInput/>
-            }
+            }*/}
+           {/* {<Table/>}*/}
+           <DatePicker/>
         </div>
     );
 }
