@@ -53,3 +53,8 @@
   margin:10px;
   padding:10px;
 }
+.modal
+{
+  height:100vh;
+  background: gray;
+}

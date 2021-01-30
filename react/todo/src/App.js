@@ -21,6 +21,7 @@ import CustomTextInput from "./componets/ref_demo/CustomTextInput";
 import AutoFocusTextInput from "./componets/ref_demo/AutoFocusTextInput";
 import Table from "./componets/fragment/Table";
 import {DatePicker} from "./componets/third_party/DatePicker";
+import ModalDemo from './componets/portal/ModalDemo';
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -63,7 +64,8 @@ function App() {
                 <AutoFocusTextInput/>
             }*/}
            {/* {<Table/>}*/}
-           <DatePicker/>
+          {/* <DatePicker/>*/}
+            {<ModalDemo/>}
         </div>
     );
 }
