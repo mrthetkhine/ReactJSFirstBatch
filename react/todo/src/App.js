@@ -17,6 +17,8 @@ import Mouse from "./componets/render_prop/Mouse";
 import MouseWithCat from "./componets/render_prop/MouseWithCat";
 import MouseTrackerWithRenderProps from "./componets/render_prop/MouseTrackerWithRenderProps";
 import DynamicComponent from "./componets/jsx_indepth/DynamicComponent";
+import CustomTextInput from "./componets/ref_demo/CustomTextInput";
+import AutoFocusTextInput from "./componets/ref_demo/AutoFocusTextInput";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -51,7 +53,13 @@ function App() {
            {/* {<Mouse/>}*/}
            {/* <MouseWithCat></MouseWithCat>*/}
           {/* <MouseTrackerWithRenderProps/>*/}
-            {<DynamicComponent userType={"admin1"}/>}
+          {/*  {<DynamicComponent userType={"admin1"}/>}*/}
+           {/* {
+                <CustomTextInput/>
+            }*/}
+            {
+                <AutoFocusTextInput/>
+            }
         </div>
     );
 }
