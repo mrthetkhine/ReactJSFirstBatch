@@ -23,6 +23,7 @@ export default function  UseMemoDemo()
             <div>
                 <button onClick={() => setCounter(counter - 1)}>-</button>
                 <button onClick={() => setCounter(counter + 1)}>+</button>
+                <button onClick={() => setCounter(counter+ 0)}>Neutral</button>
             </div>
         </div>
     )
