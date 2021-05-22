@@ -25,6 +25,7 @@ import ModalDemo from './componets/portal/ModalDemo';
 import CSS_Demo from "./componets/styling/CSS_Demo";
 import HookExample from "./componets/hook/HookExample";
 import UseEffectDemo from "./componets/hook/UseEffectDemo";
+import RealWorldUsageHook from "./componets/hook/RealWorldUsageHook";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -73,10 +74,11 @@ function App() {
             </HookExample>*/}
             {
                /* <CSS_Demo/>*/
-
+/*
                 <UseEffectDemo>
-                </UseEffectDemo>
+                </UseEffectDemo>*/
             }
+            <RealWorldUsageHook/>
         </div>
     );
 }
