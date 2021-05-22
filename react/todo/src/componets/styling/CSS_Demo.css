@@ -1,0 +1,8 @@
+.CSS_Demo
+{
+    background: blue;
+}
+.CSS_Demo.another_class
+{
+    color:gray;
+}

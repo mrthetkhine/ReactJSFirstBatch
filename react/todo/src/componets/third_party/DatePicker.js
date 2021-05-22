@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import * as datepicker from "jquery-datetimepicker";
-import 'jquery-datetimepicker/jquery.datetimepicker.css'
+import 'jquery-datetimepicker/jquery.datetimepicker.css';
 export class DatePicker extends React.Component
 {
     componentDidMount() {
