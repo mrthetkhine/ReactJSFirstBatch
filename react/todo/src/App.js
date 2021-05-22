@@ -27,6 +27,7 @@ import HookExample from "./componets/hook/HookExample";
 import UseEffectDemo from "./componets/hook/UseEffectDemo";
 import RealWorldUsageHook from "./componets/hook/RealWorldUsageHook";
 import UseCallBackHokDemo from "./componets/hook/UseCallBackHookDemo.js";
+import UseMemoDemo from "./componets/hook/UseMemoDemo";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -80,7 +81,8 @@ function App() {
                 </UseEffectDemo>*/
             }
            {/* <RealWorldUsageHook/>*/}
-          <UseCallBackHokDemo/>
+         {/* <UseCallBackHokDemo/>*/}
+          <UseMemoDemo/>
         </div>
     );
 }

@@ -11,7 +11,8 @@ export default function UseCallBackDemo()
     return(
         <div>
             <button onClick={()=>{
-                inc()
+                inc();
+                inc();
             }}>
                 Counter {count}
             </button>
