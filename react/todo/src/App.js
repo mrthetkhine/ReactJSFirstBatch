@@ -69,10 +69,13 @@ function App() {
            {/* {<Table/>}*/}
           {/* <DatePicker/>*/}
           {/*  {<ModalDemo/>}*/}
+           {/* <HookExample>
+            </HookExample>*/}
             {
                /* <CSS_Demo/>*/
-               /* <HookExample/>*/
-                <UseEffectDemo/>
+
+                <UseEffectDemo>
+                </UseEffectDemo>
             }
         </div>
     );
