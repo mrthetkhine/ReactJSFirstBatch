@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-
+const useDocumentTitle = title=>{
+    useEffect(()=>{
+        document.title = title;
+    },[])
+}
 export default function UseEffectDemo()
 {
     const [count,setCount] = useState(0);
     const [secondCounter, setSecondCounter] = useState(5);
 
-    useEffect(()=>{
-        console.log("After render");
-        document.title = `You clicked ${count} times`
-    },[count]);
-    
+    useDocumentTitle(`You clicked ${count} times`);
     return(
         <div>
             <p>You clicked {count} times</p>
