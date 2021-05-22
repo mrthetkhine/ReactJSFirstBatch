@@ -26,6 +26,7 @@ import CSS_Demo from "./componets/styling/CSS_Demo";
 import HookExample from "./componets/hook/HookExample";
 import UseEffectDemo from "./componets/hook/UseEffectDemo";
 import RealWorldUsageHook from "./componets/hook/RealWorldUsageHook";
+import UseCallBackHokDemo from "./componets/hook/UseCallBackHookDemo.js";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -78,7 +79,8 @@ function App() {
                 <UseEffectDemo>
                 </UseEffectDemo>*/
             }
-            <RealWorldUsageHook/>
+           {/* <RealWorldUsageHook/>*/}
+          <UseCallBackHokDemo/>
         </div>
     );
 }
