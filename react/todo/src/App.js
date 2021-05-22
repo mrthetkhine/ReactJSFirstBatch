@@ -24,6 +24,7 @@ import {DatePicker} from "./componets/third_party/DatePicker";
 import ModalDemo from './componets/portal/ModalDemo';
 import CSS_Demo from "./componets/styling/CSS_Demo";
 import HookExample from "./componets/hook/HookExample";
+import UseEffectDemo from "./componets/hook/UseEffectDemo";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -70,8 +71,8 @@ function App() {
           {/*  {<ModalDemo/>}*/}
             {
                /* <CSS_Demo/>*/
-                <HookExample/>
-
+               /* <HookExample/>*/
+                <UseEffectDemo/>
             }
         </div>
     );
