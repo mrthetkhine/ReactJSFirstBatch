@@ -26,6 +26,7 @@ class SecondChild extends React.Component
         return( <div>
             Second Child
             <ThirdChild/>
+            <FourthChild/>
         </div>);
 
     }
@@ -50,4 +51,13 @@ class ThirdChild extends React.Component
         </div>);
 
     }
+}
+function FourthChild(prpos)
+{
+    const user = React.useContext(UserContext);
+    return (
+        <div>
+            <h3>User in fourth component  {user.name}</h3>
+        </div>
+    )
 }
