@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState,useReducer} from "react";
 //store
+let id= 3;
+const getUniqueId = () => id++;
 const todoState = [
     {
         id:1,
@@ -26,7 +28,25 @@ function reducer(state,action)
             throw Error();
     }
 }
-
+//Action Creator
+function addAction(title)
+{
+    let id = getUniqueId();
+    return {
+        type:'add',
+        item:{
+            title: title,
+            id : id
+        }
+    }
+}
+function removeAction(item)
+{
+    return {
+        type:'remove',
+        item:item
+    }
+}
 export default function ToDoList()
 {
     const [text, setText] = useState("");
@@ -36,12 +56,7 @@ export default function ToDoList()
         <div>
             <div className="AddTodo">
                 <input value={text} onChange={e => setText(e.target.value)} className="AddTodoInput" />
-                <button className="AddTodoButton" onClick={()=>dispatch({
-                    type:'add',
-                    item:{
-                        title : text
-                    }
-                })}>Add</button>
+                <button className="AddTodoButton" onClick={()=>dispatch(addAction(text))}>Add</button>
             </div>
             <div>
                 {
@@ -50,10 +65,7 @@ export default function ToDoList()
                             item={item}
                             key = {item.id}
                             remove={()=>{
-                                dispatch({
-                                    type:'remove',
-                                    item:item
-                                })
+                                dispatch(removeAction(item))
                             }}
                         ></ToDo>
                     ))
