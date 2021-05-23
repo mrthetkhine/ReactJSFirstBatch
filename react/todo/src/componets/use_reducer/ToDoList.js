@@ -24,6 +24,12 @@ function reducer(state,action)
             return newState;
         case 'remove':
             return state.filter(item=>item.id!=action.item.id);
+        case 'update':
+            console.log('Update Action ',action)
+            return state.map(item=>
+                item.id==action.item.id?
+                    {...item,title:action.text}
+                    :item);
         default:
             throw Error();
     }
@@ -47,6 +53,14 @@ function removeAction(item)
         item:item
     }
 }
+function updateAction(item,text)
+{
+    return {
+        type:'update',
+        item:item,
+        text:text,
+    }
+}
 export default function ToDoList()
 {
     const [text, setText] = useState("");
@@ -67,6 +81,7 @@ export default function ToDoList()
                             remove={()=>{
                                 dispatch(removeAction(item))
                             }}
+                            update={()=>dispatch(updateAction(item,text))}
                         ></ToDo>
                     ))
                 }
@@ -74,11 +89,12 @@ export default function ToDoList()
         </div>
     );
 }
-function ToDo({item,remove})
+function ToDo({item,remove,update})
 {
     return(
         <div>
             {item.title} <button onClick={()=>remove()}>Remove</button>
+            <button onClick={()=>update()}>Update</button>
         </div>
     )
 }
