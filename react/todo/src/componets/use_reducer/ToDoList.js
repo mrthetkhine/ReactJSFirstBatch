@@ -20,7 +20,8 @@ function reducer(state,action)
             const newState = [...state,action.item];
             console.log('Add ',newState);
             return newState;
-
+        case 'remove':
+            return state.filter(item=>item.id!=action.item.id);
         default:
             throw Error();
     }
@@ -44,13 +45,28 @@ export default function ToDoList()
             </div>
             <div>
                 {
-                    state.map(item=>{
-                       return( <div>
-                            {item.title}
-                        </div>)
-                    })
+                    state.map(item=>(
+                        <ToDo
+                            item={item}
+                            key = {item.id}
+                            remove={()=>{
+                                dispatch({
+                                    type:'remove',
+                                    item:item
+                                })
+                            }}
+                        ></ToDo>
+                    ))
                 }
             </div>
         </div>
     );
+}
+function ToDo({item,remove})
+{
+    return(
+        <div>
+            {item.title} <button onClick={()=>remove()}>Remove</button>
+        </div>
+    )
 }
