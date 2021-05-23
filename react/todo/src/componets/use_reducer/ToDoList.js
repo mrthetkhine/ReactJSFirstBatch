@@ -1,66 +1,8 @@
 import React from 'react';
 import {useState,useReducer} from "react";
+import {addAction,removeAction,updateAction} from "./Actions";
+import {todoState,reducer} from "./Reducer";
 //store
-let id= 3;
-const getUniqueId = () => id++;
-const todoState = [
-    {
-        id:1,
-        title : 'Item One'
-    },
-    {
-        id:2,
-        title : 'Item Two'
-    }
-];
-
-function reducer(state,action)
-{
-    console.log('Reducer ',action);
-    switch (action.type) {
-        case 'add':
-            const newState = [...state,action.item];
-            console.log('Add ',newState);
-            return newState;
-        case 'remove':
-            return state.filter(item=>item.id!=action.item.id);
-        case 'update':
-            console.log('Update Action ',action)
-            return state.map(item=>
-                item.id==action.item.id?
-                    {...item,title:action.text}
-                    :item);
-        default:
-            throw Error();
-    }
-}
-//Action Creator
-function addAction(title)
-{
-    let id = getUniqueId();
-    return {
-        type:'add',
-        item:{
-            title: title,
-            id : id
-        }
-    }
-}
-function removeAction(item)
-{
-    return {
-        type:'remove',
-        item:item
-    }
-}
-function updateAction(item,text)
-{
-    return {
-        type:'update',
-        item:item,
-        text:text,
-    }
-}
 export default function ToDoList()
 {
     const [text, setText] = useState("");
