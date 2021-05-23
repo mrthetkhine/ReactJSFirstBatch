@@ -31,6 +31,7 @@ import UseMemoDemo from "./componets/hook/UseMemoDemo";
 import ContextProblemDemo from "./componets/context/problem/ContextProblemDemo";
 import ContextDemo from "./componets/context/contextdemo/ContextDemo";
 import UseReducerDemo from "./componets/use_reducer/UseReducerDemo";
+import ToDoList from "./componets/use_reducer/ToDoList";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -89,7 +90,8 @@ function App() {
 
          {/*<ContextProblemDemo user={user}></ContextProblemDemo>*/}
          {/*<ContextDemo/>*/}
-            {<UseReducerDemo/>}
+         {/*   {<UseReducerDemo/>}*/}
+         <ToDoList/>
         </div>
     );
 }
