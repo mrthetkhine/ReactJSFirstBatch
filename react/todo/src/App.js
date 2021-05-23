@@ -29,6 +29,7 @@ import RealWorldUsageHook from "./componets/hook/RealWorldUsageHook";
 import UseCallBackHokDemo from "./componets/hook/UseCallBackHookDemo.js";
 import UseMemoDemo from "./componets/hook/UseMemoDemo";
 import ContextProblemDemo from "./componets/context/problem/ContextProblemDemo";
+import ContextDemo from "./componets/context/contextdemo/ContextDemo";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -85,7 +86,8 @@ function App() {
          {/* <UseCallBackHokDemo/>*/}
          {/* <UseMemoDemo/>*/}
 
-         <ContextProblemDemo user={user}></ContextProblemDemo>
+         {/*<ContextProblemDemo user={user}></ContextProblemDemo>*/}
+         <ContextDemo/>
         </div>
     );
 }
