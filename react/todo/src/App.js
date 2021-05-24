@@ -37,6 +37,7 @@ import ToDoList from "./componets/use_reducer/ToDoList";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
+import Admin from "./pages/Admin";
 import { BrowserRouter as Router,
     Switch,
     Route,
@@ -56,6 +57,7 @@ function App() {
         name : 'James'
     };
     const id = 1;
+    const isAdmin = true;
     return (
         <Router>
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -66,6 +68,9 @@ function App() {
                         <Nav.Link href="/">Main</Nav.Link>
                         <Nav.Link href={`/about/${id}`}>About Us</Nav.Link>
                         <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+                        {
+                            isAdmin?<Nav.Link href="/admin">Admin</Nav.Link>:null
+                        }
 
                     </Nav>
 
@@ -81,6 +86,10 @@ function App() {
                 <Route path="/contact-us">
                     <ContactUs />
                 </Route>
+                {
+                    isAdmin? <Admin/>:null
+
+                }
             </Switch>
             <div className="App another-class">
                 {/* {hello() + 'How are you'}*/}
