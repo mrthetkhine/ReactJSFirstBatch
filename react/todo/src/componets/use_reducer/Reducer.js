@@ -8,6 +8,15 @@ export const todoState = [
         title : 'Item Two'
     }
 ];
+/**
+ * {
+ *     todos:[],
+ *     user:{},
+ *
+ * }
+
+ */
+
 
 export function reducer(state,action)
 {

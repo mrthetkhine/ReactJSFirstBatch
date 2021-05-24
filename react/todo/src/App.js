@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './css/App.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import Hello from "./componets/Hello";
 import HelloWorld from "./componets/HelloWorld";
 import {HelloWorldClassComp} from "./componets/HelloWorld";
@@ -32,6 +34,14 @@ import ContextProblemDemo from "./componets/context/problem/ContextProblemDemo";
 import ContextDemo from "./componets/context/contextdemo/ContextDemo";
 import UseReducerDemo from "./componets/use_reducer/UseReducerDemo";
 import ToDoList from "./componets/use_reducer/ToDoList";
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
+import { BrowserRouter as Router,
+    Switch,
+    Route,
+    useParams
+} from "react-router-dom";
 function App() {
     function hello() {
         console.log('Hello function invoked',this );
@@ -46,53 +56,89 @@ function App() {
         name : 'James'
     };
     return (
-        <div className="App another-class">
-           {/* {hello() + 'How are you'}*/}
+        <Router>
+            <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+                <Navbar.Brand href="#home">Home</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="/">Main</Nav.Link>
+                        <Nav.Link href="/about-us">Contact Us</Nav.Link>
+                        <Nav.Link href="/contact-us">About Us</Nav.Link>
 
-            {/* <Hello/>*/}
-            {/*<HelloWorld color={"blue"}></HelloWorld>
+                    </Nav>
+
+                </Navbar.Collapse>
+            </Navbar>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/about-us">
+                    <AboutUs />
+                </Route>
+                <Route path="/contact-us">
+                    <ContactUs />
+                </Route>
+            </Switch>
+            <div className="App another-class">
+                {/* {hello() + 'How are you'}*/}
+
+                {/* <Hello/>*/}
+                {/*<HelloWorld color={"blue"}></HelloWorld>
             <HelloWorldClassComp name="How are you"/>*/}
-            {/*<Counter value={5}/>
+                {/*<Counter value={5}/>
             <UserAvatar user={user}/>*/}
-            {/**/}
-            {/*<EventDemoComponent btnToggleClick={hello} />
+                {/**/}
+                {/*<EventDemoComponent btnToggleClick={hello} />
             <Greeting isLoggedIn={true}/>
             <InlineIfComponent name={"Tk"}/>
             <ListDemo/>*/}
-          {/*  <NameForm/>*/}
-          {/*  <WelcomeDialog/>*/}
-             {/* <HocDemo/>*/}
-            {/*<MouseTracker/>*/}
-           {/* {<Mouse/>}*/}
-           {/* <MouseWithCat></MouseWithCat>*/}
-          {/* <MouseTrackerWithRenderProps/>*/}
-          {/*  {<DynamicComponent userType={"admin1"}/>}*/}
-           {/* {
+                {/*  <NameForm/>*/}
+                {/*  <WelcomeDialog/>*/}
+                {/* <HocDemo/>*/}
+                {/*<MouseTracker/>*/}
+                {/* {<Mouse/>}*/}
+                {/* <MouseWithCat></MouseWithCat>*/}
+                {/* <MouseTrackerWithRenderProps/>*/}
+                {/*  {<DynamicComponent userType={"admin1"}/>}*/}
+                {/* {
                 <CustomTextInput/>
             }*/}
-          {/*  {
+                {/*  {
                 <AutoFocusTextInput/>
             }*/}
-           {/* {<Table/>}*/}
-          {/* <DatePicker/>*/}
-          {/*  {<ModalDemo/>}*/}
-           {/* <HookExample>
+                {/* {<Table/>}*/}
+                {/* <DatePicker/>*/}
+                {/*  {<ModalDemo/>}*/}
+                {/* <HookExample>
             </HookExample>*/}
-            {
-               /* <CSS_Demo/>*/
-/*
-                <UseEffectDemo>
-                </UseEffectDemo>*/
-            }
-           {/* <RealWorldUsageHook/>*/}
-         {/* <UseCallBackHokDemo/>*/}
-         {/* <UseMemoDemo/>*/}
+                {
+                    /* <CSS_Demo/>*/
+                    /*
+                                    <UseEffectDemo>
+                                    </UseEffectDemo>*/
+                }
+                {/* <RealWorldUsageHook/>*/}
+                {/* <UseCallBackHokDemo/>*/}
+                {/* <UseMemoDemo/>*/}
 
-         {/*<ContextProblemDemo user={user}></ContextProblemDemo>*/}
-         {/*<ContextDemo/>*/}
-         {/*   {<UseReducerDemo/>}*/}
-         <ToDoList/>
-        </div>
+                {/*<ContextProblemDemo user={user}></ContextProblemDemo>*/}
+                {/*<ContextDemo/>*/}
+                {/*   {<UseReducerDemo/>}*/}
+               {/* <main>
+                    <nav className="nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </main>*/}
+               {/* <ToDoList/>*/}
+            </div>
+        </Router>
+
     );
 }
 
