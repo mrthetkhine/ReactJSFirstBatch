@@ -55,6 +55,7 @@ function App() {
         imageUrl : 'https://m.media-amazon.com/images/M/MV5BMjQ4MjEyNTE4M15BMl5BanBnXkFtZTgwMzcyNDE0NDM@._V1_.jpg',
         name : 'James'
     };
+    const id = 1;
     return (
         <Router>
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -63,8 +64,8 @@ function App() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Main</Nav.Link>
-                        <Nav.Link href="/about-us">Contact Us</Nav.Link>
-                        <Nav.Link href="/contact-us">About Us</Nav.Link>
+                        <Nav.Link href={`/about/${id}`}>About Us</Nav.Link>
+                        <Nav.Link href="/contact-us">Contact Us</Nav.Link>
 
                     </Nav>
 
@@ -74,8 +75,8 @@ function App() {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/about-us">
-                    <AboutUs />
+                <Route path="/about/:id" component={AboutUs}>
+
                 </Route>
                 <Route path="/contact-us">
                     <ContactUs />
