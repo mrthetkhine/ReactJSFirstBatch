@@ -7,7 +7,7 @@ export default function AboutUs(props)
     return(
         <div>
             <h1>About us id {id} Page</h1>
-
+            <button className="btn btn-primary" onClick={() => props.history.push('/') }>Go to Main</button>
         </div>
     );
 
